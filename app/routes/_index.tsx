@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node"
-import { Card, CardContent } from "~/components/ui/card"
+import { ProfileLeft } from "./_componets/profile-left"
+import { ProfileRight } from "./_componets/profile-right"
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,16 +11,12 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex p-4 text-red-400">
+    <div className="flex h-screen space-x-2 p-4">
       <div className="w-1/2">
-        <Card className="h-full w-full">
-          <CardContent>{"あああ"}</CardContent>
-        </Card>
+        <ProfileLeft />
       </div>
       <div className="w-1/2">
-        <Card className="h-full w-full">
-          <CardContent>{"あああ"}</CardContent>
-        </Card>
+        <ProfileRight />
       </div>
     </div>
   )
