@@ -10,10 +10,17 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="p-4 font-sans text-red-400">
-      <Card>
-        <CardContent>{""}</CardContent>
-      </Card>
+    <div className="flex p-4 text-red-400">
+      <div className="w-1/2">
+        <Card className="h-full w-full">
+          <CardContent>{"あああ"}</CardContent>
+        </Card>
+      </div>
+      <div className="w-1/2">
+        <Card className="h-full w-full">
+          <CardContent>{"あああ"}</CardContent>
+        </Card>
+      </div>
     </div>
   )
 }
