@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node"
 import { ProfileTemplateOne } from "./_componets/profile-template-one"
+import { ProfileTemplatetwo } from "./_componets/profile-template-two"
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,7 +11,8 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex h-screen space-x-2 p-4">
+    <div className="flex space-x-2 border-r">
+      <ProfileTemplatetwo />
       <ProfileTemplateOne />
     </div>
   )
