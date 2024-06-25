@@ -1,6 +1,5 @@
 import type { MetaFunction } from "@remix-run/node"
 import { ProfileLeft } from "./_componets/profile-left"
-import { ProfileRight } from "./_componets/profile-right"
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,9 +14,9 @@ export default function Index() {
       <div className="w-1/2">
         <ProfileLeft />
       </div>
-      <div className="w-1/2">
+      {/* <div className="w-1/2">
         <ProfileRight />
-      </div>
+      </div> */}
     </div>
   )
 }
