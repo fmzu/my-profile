@@ -1,5 +1,5 @@
-import { Card, CardContent } from "~/components/ui/card"
-import { Input } from "~/components/ui/input"
+import {} from "~/components/ui/card"
+import { Textarea } from "~/components/ui/textarea"
 
 type Props = {
   text: string
@@ -7,11 +7,9 @@ type Props = {
 
 export function DetailCard(props: Props) {
   return (
-    <Card className="h-20">
-      <CardContent>
-        <p>{props.text}</p>
-        <Input />
-      </CardContent>
-    </Card>
+    <div>
+      <p className="text-xs">{props.text}</p>
+      <Textarea />
+    </div>
   )
 }
