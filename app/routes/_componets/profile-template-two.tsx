@@ -84,7 +84,7 @@ export function ProfileTemplatetwo() {
         </div>
       </div>
       <div className="flex flex-col space-y-1 border-b pb-2">
-        <p className="text-sm">{"好きなもの"}</p>
+        <p className="text-sm text-white">{"好きなもの"}</p>
         <div className="grid grid-cols-3 gap-2">
           <div>
             <p className="text-xs">{"食べ物"}</p>
@@ -150,7 +150,7 @@ export function ProfileTemplatetwo() {
       </div>
       <div>
         <div className="flex items-center space-x-2">
-          <p className="text-sm">{"FREE SPACE"}</p>
+          <p className="text-sm text-white">{"FREE SPACE"}</p>
           <p className="text-xs opacity-50">{"ここは自由に記載してください"}</p>
         </div>
         <textarea
