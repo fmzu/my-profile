@@ -5,7 +5,7 @@ export function ProfileTemplatetwo() {
       style={{ height: "932px", width: "430px", boxSizing: "border-box" }}
     >
       <div className="flex items-center justify-between">
-        <p className="font-bold text-lg">{"PROFILE"}</p>
+        <p className="font-bold text-lg text-white">{"PROFILE"}</p>
         <p className="text-xs opacity-50">{"YY/MM/DD"}</p>
       </div>
       <div className="flex">
@@ -149,7 +149,10 @@ export function ProfileTemplatetwo() {
         </div>
       </div>
       <div>
-        <p className="text-sm">{"FREE SPACE"}</p>
+        <div className="flex items-center space-x-2">
+          <p className="text-sm">{"FREE SPACE"}</p>
+          <p className="text-xs opacity-50">{"ここは自由に記載してください"}</p>
+        </div>
         <textarea
           placeholder="自由に記載してね！"
           className="h-full w-full bg-blue-200 text-xl"
