@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node"
-import { ProfileLeft } from "./_componets/profile-left"
+import { BasicInformationCard } from "./_componets/basic-information-card"
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,8 +11,8 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="flex h-screen space-x-2 p-4">
-      <div className="w-1/2">
-        <ProfileLeft />
+      <div className="md:w-1/2">
+        <BasicInformationCard />
       </div>
       {/* <div className="w-1/2">
         <ProfileRight />

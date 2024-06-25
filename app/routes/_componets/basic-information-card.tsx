@@ -4,7 +4,7 @@ import { LeftBasicInformation } from "./left-basic-information"
 import { LeftFreeDescription } from "./left-free-description"
 import { LeftDetailInformation } from "./left-detail-information"
 
-export function ProfileLeft() {
+export function BasicInformationCard() {
   return (
     <Card className="h-full w-full">
       <CardHeader>
