@@ -1,10 +1,13 @@
 type Props = {
+  date: string
   name: string
   birthplace: string
   twitterId: string
   instagramId: string
   works: string
   nickname: string
+  bloodType: string
+  Mbti: string
   personality: string
   favorite: string
   sns: string
@@ -33,7 +36,7 @@ export function ProfileTemplatetwo(props: Props) {
         <p className="font-bold text-white text-xl">{"PROFILE"}</p>
         <input
           className="h-4 w-24 bg-blue-200 text-Xs"
-          value={props.name}
+          value={props.date}
           placeholder="今日の日付"
         />
       </div>
@@ -96,12 +99,20 @@ export function ProfileTemplatetwo(props: Props) {
           />
           <p className="text-xs">{"って呼んでください！"}</p>
           <p className="text-xs">{"血液型は"}</p>
-          <input placeholder="血液型" className="w-16 bg-blue-200 text-xl" />
+          <input
+            placeholder="血液型"
+            className="w-16 bg-blue-200 text-xl"
+            value={props.bloodType}
+          />
         </div>
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"型で、"}</p>
           <p className="text-xs">{"MBTIは"}</p>
-          <input placeholder="MBTI" className="w-16 bg-blue-200 text-xl" />
+          <input
+            placeholder="MBTI"
+            className="w-16 bg-blue-200 text-xl"
+            value={props.Mbti}
+          />
           <p className="text-xs">{"です！"}</p>
           <input
             placeholder="性格"

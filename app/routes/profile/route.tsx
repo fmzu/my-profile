@@ -2,8 +2,21 @@ import { Input } from "~/components/ui/input"
 import { ProfileTemplatetwo } from "../_componets/profile-template-two"
 import { Textarea } from "~/components/ui/textarea"
 import { useState } from "react"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/ui/select"
+import { MbtiSelect } from "./_componets/mbti-select"
+import { DatePicker } from "./_componets/date-picker"
+import { CropImageField } from "./_componets/crop-image-field"
 
 export default function Profile() {
+  const [date, setDate] = useState("")
+
   const [name, setName] = useState("")
 
   const [birthplace, setBirthplace] = useState("")
@@ -15,6 +28,10 @@ export default function Profile() {
   const [works, setWorks] = useState("")
 
   const [nickname, setNickname] = useState("")
+
+  const [bloodType, setBloodType] = useState("")
+
+  const [Mbti, setMbti] = useState("")
 
   const [personality, setPersonality] = useState("")
 
@@ -51,12 +68,15 @@ export default function Profile() {
   return (
     <div className="flex space-x-2">
       <ProfileTemplatetwo
+        date={date}
         name={name}
         birthplace={birthplace}
         twitterId={twitterId}
         instagramId={instagramId}
         works={works}
         nickname={nickname}
+        bloodType={""}
+        Mbti={""}
         personality={personality}
         favorite={favorite}
         sns={sns}
@@ -75,6 +95,20 @@ export default function Profile() {
         freeSpace={freeSpace}
       />
       <div className="flex flex-col space-y-2 p-2">
+        <div>
+          <p>{"今日の日付"}</p>
+          <DatePicker />
+          <Input
+            placeholder="今日の日付"
+            onChange={(e) => {
+              setDate(e.target.value)
+            }}
+          />
+        </div>
+        <div>
+          <p>{"アイコン"}</p>
+          <CropImageField />
+        </div>
         <div>
           <p>{"基本情報"}</p>
           <div className="flex flex-col gap-y-2">
@@ -120,7 +154,22 @@ export default function Profile() {
                 setNickname(e.target.value)
               }}
             />
-            <Input placeholder="血液型" />
+            <Select>
+              <SelectTrigger>
+                <SelectValue placeholder="血液型" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup className="bg-white">
+                  <SelectItem value="A">{"A"}</SelectItem>
+                  <SelectItem value="B">{"B"}</SelectItem>
+                  <SelectItem value="O">{"O"}</SelectItem>
+                  <SelectItem value="AB">{"AB"}</SelectItem>
+                  <SelectItem value="other">{"その他"}</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            {/* <BloodTypeSelect /> */}
+            <MbtiSelect />
             <Input placeholder="MBTI" />
             <Input
               placeholder="性格"
@@ -231,4 +280,7 @@ export default function Profile() {
       </div>
     </div>
   )
+}
+function getBase64FromImageUrl(croppedImage: string) {
+  throw new Error("Function not implemented.")
 }
