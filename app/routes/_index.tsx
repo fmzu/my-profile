@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="flex space-x-2 border-r">
-      <ProfileTemplatetwo />
+      <ProfileTemplatetwo name={""} />
       <ProfileTemplateOne />
     </div>
   )
