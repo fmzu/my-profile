@@ -11,7 +11,6 @@ import {
   SelectValue,
 } from "~/components/ui/select"
 import { MbtiSelect } from "./_componets/mbti-select"
-import { DatePicker } from "./_componets/date-picker"
 import { CropImageField } from "./_componets/crop-image-field"
 
 export default function Profile() {
@@ -97,12 +96,12 @@ export default function Profile() {
       <div className="flex flex-col space-y-2 p-2">
         <div>
           <p>{"今日の日付"}</p>
-          <DatePicker />
           <Input
             placeholder="今日の日付"
             onChange={(e) => {
               setDate(e.target.value)
             }}
+            type="date"
           />
         </div>
         <div>
