@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from "~/components/ui/select"
 import { MbtiSelect } from "./_componets/mbti-select"
-import { CropImageField } from "./_componets/crop-image-field"
+import { ArrowUpFromLineIcon } from "lucide-react"
 
 export default function Profile() {
   const [date, setDate] = useState("")
@@ -106,7 +106,21 @@ export default function Profile() {
         </div>
         <div>
           <p>{"アイコン"}</p>
-          <CropImageField />
+          <div className="relative">
+            <div className="rounded-lg border p-4">
+              <ArrowUpFromLineIcon className="m-auto h-4 w-4 opacity-80" />
+              <p className="text-center text-sm opacity-80">
+                {"画像アップロード"}
+              </p>
+            </div>
+            <Input
+              type="file"
+              id=""
+              name=""
+              className="absolute top-0 left-0 h-full w-full cursor-pointer opacity-0"
+            />
+          </div>
+          {/* <CropImageField /> */}
         </div>
         <div>
           <p>{"基本情報"}</p>
