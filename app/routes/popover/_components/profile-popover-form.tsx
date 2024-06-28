@@ -18,7 +18,10 @@ export function ProfilePopoverForm(props: Props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <input className={cn("bg-blue-200", props.className)} value={text} />
+        <input
+          className={cn("rounded-md bg-blue-200", props.className)}
+          value={text}
+        />
       </PopoverTrigger>
       <PopoverContent className="bg-white">
         <Input

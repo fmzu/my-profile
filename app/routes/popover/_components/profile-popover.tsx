@@ -1,3 +1,5 @@
+import { BloodTypeSelect } from "./blood-type-select"
+import { MbtiSelect } from "./mbti-select"
 import { ProfilePopoverForm } from "./profile-popover-form"
 import { ProfileTextAreaForm } from "./profile-textarea-form"
 
@@ -9,10 +11,14 @@ export function ProfilePopover() {
     >
       <div className="flex items-center justify-between">
         <p className="font-bold text-white text-xl">{"PROFILE"}</p>
-        <input
-          className="h-4 w-24 bg-blue-200 text-xs"
-          placeholder="今日の日付"
-        />
+        <div className="flex items-center space-x-2">
+          <p className="text-xs">{"今日の日付: "}</p>
+          <input
+            className="h-4 w-24 rounded-md bg-blue-200 text-xs"
+            placeholder="今日の日付"
+            type="date"
+          />
+        </div>
       </div>
       <div className="flex">
         <div className="flex w-2/3 flex-col space-y-1 pr-2">
@@ -34,13 +40,17 @@ export function ProfilePopover() {
           </div>
         </div>
         <div className="w-1/3">
-          <img src="https://github.com/shadcn.png" alt="" />
+          <input className="h-28 w-full rounded-md bg-blue-200" />
         </div>
       </div>
       <div className="flex flex-col space-y-1 border-b pb-2">
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"わたしは"}</p>
-          <ProfilePopoverForm title="生年月日" className="w-28" />
+          <input
+            className="h-6 w-28 rounded-md bg-blue-200 text-xs"
+            placeholder="今日の日付"
+            type="date"
+          />
           <p className="text-xs">{"生まれの"}</p>
           <ProfilePopoverForm title="職業" className="w-24" />
           <p className="text-xs">{"です！"}</p>
@@ -49,12 +59,12 @@ export function ProfilePopover() {
           <ProfilePopoverForm title="ニックネーム" className="w-32" />
           <p className="text-xs">{"って呼んでください！"}</p>
           <p className="text-xs">{"血液型は"}</p>
-          <ProfilePopoverForm title="血液型" className="w-16" />
+          <BloodTypeSelect className="h-6 w-16" />
         </div>
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"型で、"}</p>
           <p className="text-xs">{"MBTIは"}</p>
-          <ProfilePopoverForm title="MBTI" className="w-16" />
+          <MbtiSelect className="h-6 w-16" />
           <p className="text-xs">{"です！"}</p>
           <ProfilePopoverForm title="性格" className="w-40" />
         </div>
