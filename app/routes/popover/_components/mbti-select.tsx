@@ -22,22 +22,22 @@ export function MbtiSelect(props: Props) {
       <SelectContent className="h-64 bg-white">
         <SelectGroup>
           <SelectLabel>{"MBTI"}</SelectLabel>
-          <SelectItem value="intj">{"INTJ(建築家)"}</SelectItem>
-          <SelectItem value="intp">{"INTP(論理学者)"}</SelectItem>
-          <SelectItem value="entj">{"ENTJ(指揮者)"}</SelectItem>
-          <SelectItem value="entp">{"ENTP(討論者)"}</SelectItem>
-          <SelectItem value="istp">{"ISTP(巨匠)"}</SelectItem>
-          <SelectItem value="isfp">{"ISFP(冒険家)"}</SelectItem>
-          <SelectItem value="estp">{"ESTP(起業家)"}</SelectItem>
-          <SelectItem value="esfp">{"ESFP(エンターテイナー)"}</SelectItem>
-          <SelectItem value="istj">{"ISTJ(管理者)"}</SelectItem>
-          <SelectItem value="isfj">{"ISFJ(擁護者)"}</SelectItem>
-          <SelectItem value="estj">{"ESTJ(幹部)"}</SelectItem>
-          <SelectItem value="esfj">{"ESFJ(領事官)"}</SelectItem>
-          <SelectItem value="infj">{"INFJ(提唱者)"}</SelectItem>
-          <SelectItem value="infp">{"INFP(仲介者)"}</SelectItem>
-          <SelectItem value="enfj">{"ENFJ(主人公)"}</SelectItem>
-          <SelectItem value="enfp">{"ENFP(広報運動家)"}</SelectItem>
+          <SelectItem value="intj">{"INTJ"}</SelectItem>
+          <SelectItem value="intp">{"INTP"}</SelectItem>
+          <SelectItem value="entj">{"ENTJ"}</SelectItem>
+          <SelectItem value="entp">{"ENTP"}</SelectItem>
+          <SelectItem value="istp">{"ISTP"}</SelectItem>
+          <SelectItem value="isfp">{"ISFP"}</SelectItem>
+          <SelectItem value="estp">{"ESTP"}</SelectItem>
+          <SelectItem value="esfp">{"ESFP"}</SelectItem>
+          <SelectItem value="istj">{"ISTJ"}</SelectItem>
+          <SelectItem value="isfj">{"ISFJ"}</SelectItem>
+          <SelectItem value="estj">{"ESTJ"}</SelectItem>
+          <SelectItem value="esfj">{"ESFJ"}</SelectItem>
+          <SelectItem value="infj">{"INFJ"}</SelectItem>
+          <SelectItem value="infp">{"INFP"}</SelectItem>
+          <SelectItem value="enfj">{"ENFJ"}</SelectItem>
+          <SelectItem value="enfp">{"ENFP"}</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

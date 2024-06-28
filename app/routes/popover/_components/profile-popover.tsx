@@ -64,9 +64,9 @@ export function ProfilePopover() {
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"型で、"}</p>
           <p className="text-xs">{"MBTIは"}</p>
-          <MbtiSelect className="h-6 w-16" />
-          <p className="text-xs">{"です！"}</p>
-          <ProfilePopoverForm title="性格" className="w-40" />
+          <MbtiSelect className="h-6 w-20" />
+          <p className="text-xs">{"の、"}</p>
+          <ProfilePopoverForm title="性格" className="w-36" />
         </div>
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"な性格です！"}</p>
