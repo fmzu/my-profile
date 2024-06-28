@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Button } from "~/components/ui/button"
 import { Input } from "~/components/ui/input"
 import { cn } from "~/components/ui/lib/utils"
 import {
@@ -23,13 +24,19 @@ export function ProfilePopoverForm(props: Props) {
           value={text}
         />
       </PopoverTrigger>
-      <PopoverContent className="bg-white">
-        <Input
-          placeholder={props.title}
-          onChange={(event) => {
-            setText(event.target.value)
-          }}
-        />
+      <PopoverContent className="flex flex-col space-y-2 bg-white">
+        <div>
+          <p className="text-sm">{props.title}</p>
+          <Input
+            placeholder={props.title}
+            onChange={(event) => {
+              setText(event.target.value)
+            }}
+          />
+        </div>
+        <div className="flex justify-end">
+          <Button variant={"outline"}>{"保存"}</Button>
+        </div>
       </PopoverContent>
     </Popover>
   )
