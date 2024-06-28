@@ -23,20 +23,20 @@ export function ProfilePopover() {
       <div className="flex">
         <div className="flex w-2/3 flex-col space-y-1 pr-2">
           <div className="flex items-center space-x-2 border-b">
-            <p className="text-xs">{"名前: "}</p>
-            <ProfilePopoverForm title="名前" className="w-48" />
+            <p className="min-w-fit text-xs">{"名前: "}</p>
+            <ProfilePopoverForm title="名前" className="w-full" />
           </div>
           <div className="flex items-center space-x-2 border-b">
-            <p className="text-xs">{"出身地: "}</p>
-            <ProfilePopoverForm title="出身地" className="w-44" />
+            <p className="min-w-fit text-xs">{"出身地: "}</p>
+            <ProfilePopoverForm title="出身地" className="w-full" />
           </div>
           <div className="flex items-center space-x-2 border-b">
-            <p className="text-xs">{"Twitter: "}</p>
-            <ProfilePopoverForm title="Twitter" className="w-44" />
+            <p className="min-w-fit text-xs">{"Twitter: "}</p>
+            <ProfilePopoverForm title="Twitter" className="w-full" />
           </div>
           <div className="flex items-center space-x-2 border-b">
-            <p className="text-xs">{"Instagram: "}</p>
-            <ProfilePopoverForm title="Instagram" className="w-40" />
+            <p className="min-w-fit text-xs">{"Instagram: "}</p>
+            <ProfilePopoverForm title="Instagram" className="w-full" />
           </div>
         </div>
         <div className="w-1/3">
