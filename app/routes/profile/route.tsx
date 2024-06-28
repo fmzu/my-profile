@@ -13,7 +13,7 @@ import {
 import { MbtiSelect } from "./_componets/mbti-select"
 import { ArrowUpFromLineIcon } from "lucide-react"
 
-export default function Profile() {
+export default function ProfilePage() {
   const [date, setDate] = useState("")
 
   const [name, setName] = useState("")
