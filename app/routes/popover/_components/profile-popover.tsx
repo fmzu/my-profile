@@ -1,4 +1,5 @@
 import { BloodTypeSelect } from "./blood-type-select"
+import { DateSelect } from "./date-select"
 import { MbtiSelect } from "./mbti-select"
 import { ProfilePopoverForm } from "./profile-popover-form"
 import { ProfileTextAreaForm } from "./profile-textarea-form"
@@ -6,20 +7,14 @@ import { ProfileTextAreaForm } from "./profile-textarea-form"
 export function ProfilePopover() {
   return (
     <div
-      className="flex flex-col space-y-2 border-2 border-gray-300 bg-blue-300 p-8"
-      style={{ height: "932px", width: "430px", boxSizing: "border-box" }}
+      id="profile"
+      className="flex flex-col space-y-2 border-2 border-gray-300 bg-blue-300 p-4"
+      style={{
+        height: `${257 * 2}px`,
+        width: `${182 * 2}px`,
+        boxSizing: "border-box",
+      }}
     >
-      <div className="flex items-center justify-between">
-        <p className="font-bold text-white text-xl">{"PROFILE"}</p>
-        <div className="flex items-center space-x-2">
-          <p className="text-xs">{"今日の日付: "}</p>
-          <input
-            className="h-4 w-24 rounded-md bg-blue-200 text-xs"
-            placeholder="今日の日付"
-            type="date"
-          />
-        </div>
-      </div>
       <div className="flex">
         <div className="flex w-2/3 flex-col space-y-1 pr-2">
           <div className="flex items-center space-x-2 border-b">
@@ -46,11 +41,7 @@ export function ProfilePopover() {
       <div className="flex flex-col space-y-1 border-b pb-2">
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"わたしは"}</p>
-          <input
-            className="h-6 w-28 rounded-md bg-blue-200 text-xs"
-            placeholder="今日の日付"
-            type="date"
-          />
+          <DateSelect className="h-6 w-28 bg-blue-200 text-xs" />
           <p className="text-xs">{"生まれの"}</p>
           <ProfilePopoverForm title="職業" className="w-24" />
           <p className="text-xs">{"です！"}</p>
