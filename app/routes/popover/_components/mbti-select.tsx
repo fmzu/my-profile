@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Button } from "~/components/ui/button"
 import { cn } from "~/components/ui/lib/utils"
 import {
@@ -20,37 +21,45 @@ type Props = {
 }
 
 export function MbtiSelect(props: Props) {
+  const [selected, setSelected] = useState("")
+
+  const handleStringToInt = (value: string) => {
+    setSelected(String(value))
+  }
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <input className={cn("rounded-md bg-blue-200", props.className)} />
+        <input
+          className={cn("rounded-md bg-blue-200", props.className)}
+          value={selected}
+        />
       </PopoverTrigger>
       <PopoverContent className="flex flex-col space-y-2 bg-white">
         <div>
           <p className="text-sm">{"MBTI"}</p>
-          <Select>
+          <Select onValueChange={handleStringToInt}>
             <SelectTrigger>
               <SelectValue placeholder="MBTI" />
             </SelectTrigger>
             <SelectContent className="h-64 bg-white">
               <SelectGroup>
                 <SelectLabel>{"MBTI"}</SelectLabel>
-                <SelectItem value="intj">{"INTJ"}</SelectItem>
-                <SelectItem value="intp">{"INTP"}</SelectItem>
-                <SelectItem value="entj">{"ENTJ"}</SelectItem>
-                <SelectItem value="entp">{"ENTP"}</SelectItem>
-                <SelectItem value="istp">{"ISTP"}</SelectItem>
-                <SelectItem value="isfp">{"ISFP"}</SelectItem>
-                <SelectItem value="estp">{"ESTP"}</SelectItem>
-                <SelectItem value="esfp">{"ESFP"}</SelectItem>
-                <SelectItem value="istj">{"ISTJ"}</SelectItem>
-                <SelectItem value="isfj">{"ISFJ"}</SelectItem>
-                <SelectItem value="estj">{"ESTJ"}</SelectItem>
-                <SelectItem value="esfj">{"ESFJ"}</SelectItem>
-                <SelectItem value="infj">{"INFJ"}</SelectItem>
-                <SelectItem value="infp">{"INFP"}</SelectItem>
-                <SelectItem value="enfj">{"ENFJ"}</SelectItem>
-                <SelectItem value="enfp">{"ENFP"}</SelectItem>
+                <SelectItem value="INTJ">{"INTJ"}</SelectItem>
+                <SelectItem value="INTP">{"INTP"}</SelectItem>
+                <SelectItem value="ENTJ">{"ENTJ"}</SelectItem>
+                <SelectItem value="ENTP">{"ENTP"}</SelectItem>
+                <SelectItem value="ISTP">{"ISTP"}</SelectItem>
+                <SelectItem value="ISFP">{"ISFP"}</SelectItem>
+                <SelectItem value="ESTP">{"ESTP"}</SelectItem>
+                <SelectItem value="ESFP">{"ESFP"}</SelectItem>
+                <SelectItem value="ISTJ">{"ISTJ"}</SelectItem>
+                <SelectItem value="ISFJ">{"ISFJ"}</SelectItem>
+                <SelectItem value="ESTJ">{"ESTJ"}</SelectItem>
+                <SelectItem value="ESFJ">{"ESFJ"}</SelectItem>
+                <SelectItem value="INFJ">{"INFJ"}</SelectItem>
+                <SelectItem value="INFP">{"INFP"}</SelectItem>
+                <SelectItem value="ENFJ">{"ENFJ"}</SelectItem>
+                <SelectItem value="ENFP">{"ENFP"}</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Button } from "~/components/ui/button"
 import { cn } from "~/components/ui/lib/utils"
 import {
@@ -20,15 +21,24 @@ type Props = {
 }
 
 export function BloodTypeSelect(props: Props) {
+  const [selected, setSelected] = useState("")
+
+  const handleStringToInt = (value: string) => {
+    setSelected(String(value))
+  }
+
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <input className={cn("rounded-md bg-blue-200", props.className)} />
+        <input
+          className={cn("rounded-md bg-blue-200", props.className)}
+          value={selected}
+        />
       </PopoverTrigger>
       <PopoverContent className="flex flex-col space-y-2 bg-white">
         <div>
           <p className="text-sm">{"血液型"}</p>
-          <Select>
+          <Select onValueChange={handleStringToInt}>
             <SelectTrigger>
               <SelectValue placeholder="血液型" />
             </SelectTrigger>
