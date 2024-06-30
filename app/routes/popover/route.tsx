@@ -1,10 +1,10 @@
 import { ProfileImage } from "./_components/profile-image"
-import { ProfilePopover } from "./_components/profile-popover"
+import { ProfileTwoPopover } from "./_components/profile-two-popover"
 
 export default function PopoverPage() {
   return (
     <div>
-      <ProfilePopover />
+      <ProfileTwoPopover />
       <ProfileImage />
     </div>
   )

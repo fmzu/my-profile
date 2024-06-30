@@ -16,7 +16,7 @@ export function ProfileTextAreaForm(props: Props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <input className="h-24 w-full rounded-md bg-blue-200" value={text} />
+        <input className="h-12 w-full rounded-md bg-blue-200" value={text} />
       </PopoverTrigger>
       <PopoverContent className="bg-white">
         <Textarea
