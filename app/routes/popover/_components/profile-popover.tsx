@@ -1,9 +1,12 @@
 import { BloodTypeSelect } from "./blood-type-select"
 import { DateSelect } from "./date-select"
 import { MbtiSelect } from "./mbti-select"
-import { ProfilePopoverForm } from "./profile-popover-form"
+import { ProfileFormItemText } from "./profile-form-item-text"
 import { ProfileTextAreaForm } from "./profile-textarea-form"
 
+/**
+ * 今んとこ使ってないプロフィールテンテンプレート
+ */
 export function ProfilePopover() {
   return (
     <div
@@ -19,19 +22,35 @@ export function ProfilePopover() {
         <div className="flex w-2/3 flex-col space-y-1 pr-2">
           <div className="flex items-center space-x-2 border-b">
             <p className="min-w-fit text-xs">{"名前: "}</p>
-            <ProfilePopoverForm title="名前" className="w-full" />
+            <ProfileFormItemText
+              title="名前"
+              className="w-full"
+              maxLength={10}
+            />
           </div>
           <div className="flex items-center space-x-2 border-b">
             <p className="min-w-fit text-xs">{"出身地: "}</p>
-            <ProfilePopoverForm title="出身地" className="w-full" />
+            <ProfileFormItemText
+              title="出身地"
+              className="w-full"
+              maxLength={10}
+            />
           </div>
           <div className="flex items-center space-x-2 border-b">
             <p className="min-w-fit text-xs">{"Twitter: "}</p>
-            <ProfilePopoverForm title="Twitter" className="w-full" />
+            <ProfileFormItemText
+              title="Twitter"
+              className="w-full"
+              maxLength={10}
+            />
           </div>
           <div className="flex items-center space-x-2 border-b">
             <p className="min-w-fit text-xs">{"Instagram: "}</p>
-            <ProfilePopoverForm title="Instagram" className="w-full" />
+            <ProfileFormItemText
+              title="Instagram"
+              className="w-full"
+              maxLength={10}
+            />
           </div>
         </div>
         <div className="w-1/3">
@@ -43,11 +62,15 @@ export function ProfilePopover() {
           <p className="text-xs">{"わたしは"}</p>
           <DateSelect className="h-6 w-28 bg-blue-200 text-xs" />
           <p className="text-xs">{"生まれの"}</p>
-          <ProfilePopoverForm title="職業" className="w-24" />
+          <ProfileFormItemText title="職業" className="w-24" maxLength={10} />
           <p className="text-xs">{"です！"}</p>
         </div>
         <div className="flex items-center space-x-2">
-          <ProfilePopoverForm title="ニックネーム" className="w-32" />
+          <ProfileFormItemText
+            title="ニックネーム"
+            className="w-32"
+            maxLength={10}
+          />
           <p className="text-xs">{"って呼んでください！"}</p>
           <p className="text-xs">{"血液型は"}</p>
           <BloodTypeSelect className="h-6 w-16" />
@@ -57,16 +80,24 @@ export function ProfilePopover() {
           <p className="text-xs">{"MBTIは"}</p>
           <MbtiSelect className="h-6 w-20" />
           <p className="text-xs">{"の、"}</p>
-          <ProfilePopoverForm title="性格" className="w-36" />
+          <ProfileFormItemText title="性格" className="w-36" maxLength={10} />
         </div>
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"な性格です！"}</p>
-          <ProfilePopoverForm title="好きなもの" className="w-52" />
+          <ProfileFormItemText
+            title="好きなもの"
+            className="w-52"
+            maxLength={10}
+          />
           <p className="text-xs">{"が好きです！"}</p>
         </div>
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"よく"}</p>
-          <ProfilePopoverForm title="活動拠点" className="w-32" />
+          <ProfileFormItemText
+            title="活動拠点"
+            className="w-32"
+            maxLength={10}
+          />
           <p className="text-xs">{"に浮上してます！"}</p>
           <p className="text-xs">{"よろしくお願いします！"}</p>
         </div>
@@ -76,57 +107,105 @@ export function ProfilePopover() {
         <div className="grid grid-cols-3 gap-2">
           <div>
             <p className="text-xs">{"食べ物"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="食べ物" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="食べ物"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"飲み物"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="飲み物" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="飲み物"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"映画"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="映画" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="映画"
+              maxLength={10}
+            />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-2">
           <div>
             <p className="text-xs">{"有名人"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="有名人" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="有名人"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"色"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="色" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="色"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"ゲーム"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="ゲーム" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="ゲーム"
+              maxLength={10}
+            />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-2">
           <div>
             <p className="text-xs">{"どうぶつ"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="どうぶつ" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="どうぶつ"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"ブランド"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="ブランド" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="ブランド"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"場所"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="場所" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="場所"
+              maxLength={10}
+            />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-2">
           <div>
             <p className="text-xs">{"音楽"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="音楽" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="音楽"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"アーティスト"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="アーティスト" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="アーティスト"
+              maxLength={10}
+            />
           </div>
           <div>
             <p className="text-xs">{"曲"}</p>
-            <ProfilePopoverForm className="h-8 w-28" title="曲" />
+            <ProfileFormItemText
+              className="h-8 w-28"
+              title="曲"
+              maxLength={10}
+            />
           </div>
         </div>
       </div>

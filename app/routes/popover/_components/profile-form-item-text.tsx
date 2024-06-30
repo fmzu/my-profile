@@ -11,9 +11,10 @@ import {
 type Props = {
   className: string
   title: string
+  maxLength: number
 }
 
-export function ProfilePopoverForm(props: Props) {
+export function ProfileFormItemText(props: Props) {
   const [text, setText] = useState("")
 
   return (
@@ -27,14 +28,19 @@ export function ProfilePopoverForm(props: Props) {
       <PopoverContent className="flex flex-col space-y-2 bg-white">
         <div>
           <p className="text-sm">{props.title}</p>
-          <Input
-            placeholder={props.title}
-            onChange={(event) => {
-              setText(event.target.value)
-            }}
-          />
+          <div className="flex items-end space-x-1">
+            <Input
+              placeholder={props.title}
+              onChange={(event) => {
+                if (event.target.value.length <= props.maxLength) {
+                  setText(event.target.value)
+                }
+              }}
+            />
+          </div>
         </div>
-        <div className="flex justify-end">
+        <div className="flex items-end justify-end space-x-1">
+          <p className="text-xs">{`${props.maxLength - text.length}`}</p>
           <Button variant={"outline"}>{"保存"}</Button>
         </div>
       </PopoverContent>
