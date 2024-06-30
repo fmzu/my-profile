@@ -18,7 +18,7 @@ export function ProfileTwoPopover() {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-y-1">
           <div className="flex">
-            <div className="flex w-2/3 flex-col gap-y-1 pr-2">
+            <div className="flex w-4/5 flex-col gap-y-1 pr-2">
               <div className="flex items-center gap-x-2">
                 <p className="min-w-fit text-xs">{"名前"}</p>
                 <ProfilePopoverForm title="名前" className="w-full" />
@@ -28,7 +28,7 @@ export function ProfileTwoPopover() {
                 <ProfilePopoverForm title="出身地" className="w-full" />
               </div>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/5">
               <input className="h-full w-full rounded-md bg-blue-200" />
             </div>
           </div>
