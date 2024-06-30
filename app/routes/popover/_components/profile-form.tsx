@@ -177,7 +177,7 @@ export function ProfileForm() {
         </div>
         <div>
           <p className="text-xs">{"自由記載"}</p>
-          <ProfileTextAreaForm title={"自由記載"} />
+          <ProfileTextAreaForm title={"自由記載"} maxLength={50} />
         </div>
       </div>
     </div>
