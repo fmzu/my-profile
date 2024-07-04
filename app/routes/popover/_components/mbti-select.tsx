@@ -26,6 +26,7 @@ export function MbtiSelect(props: Props) {
   const handleStringToInt = (value: string) => {
     setSelected(String(value))
   }
+
   return (
     <Popover>
       <PopoverTrigger asChild>
