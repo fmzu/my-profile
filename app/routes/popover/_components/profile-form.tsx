@@ -1,5 +1,6 @@
 import { BloodTypeSelect } from "./blood-type-select"
 import { DateSelect } from "./date-select"
+import { ImageForm } from "./image-form"
 import { MbtiSelect } from "./mbti-select"
 import { ProfileFormItemText } from "./profile-form-item-text"
 import { ProfileTextAreaForm } from "./profile-textarea-form"
@@ -45,7 +46,7 @@ export function ProfileForm() {
               </div>
             </div>
             <div className="w-1/5">
-              <input className="h-full w-full rounded-md bg-blue-200" />
+              <ImageForm />
             </div>
           </div>
         </div>

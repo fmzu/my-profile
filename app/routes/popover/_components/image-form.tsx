@@ -5,8 +5,6 @@ export function ImageForm() {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const [imageSrc, setImageSrc] = useState<string | null>(null)
 
-  const cropperClassName = "react-easy-crop-container"
-
   const onFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null
     if (file) {
@@ -20,13 +18,21 @@ export function ImageForm() {
 
   return (
     <div className="relative">
-      <div className="rounded-lg border p-4">
-        <ArrowUpFromLineIcon className="m-auto h-4 w-4 opacity-80" />
-        <div className="text-center text-sm opacity-80">
-          {"画像アップロード"}
+      {!imageSrc && (
+        <div className="flex h-20 w-full flex-col items-center justify-center rounded-lg border bg-blue-200">
+          <div>
+            <ArrowUpFromLineIcon className="m-auto h-4 w-4 opacity-80" />
+            <div className="text-center text-xs opacity-80">{"画像を追加"}</div>
+          </div>
         </div>
-        {imageSrc && <img src={imageSrc} alt="Uploaded" className="mt-4" />}
-      </div>
+      )}
+      {imageSrc && (
+        <img
+          src={imageSrc}
+          alt="Uploaded"
+          className="flex h-20 w-full flex-col items-center justify-center rounded-lg border"
+        />
+      )}
       <input
         ref={fileInputRef}
         type="file"
