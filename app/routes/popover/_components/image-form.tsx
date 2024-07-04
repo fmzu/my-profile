@@ -1,8 +1,12 @@
 import { ArrowUpFromLineIcon } from "lucide-react"
 import { useRef, useState } from "react"
-
+/**
+ * アイコン画像をアップロードする
+ * @returns
+ */
 export function ImageForm() {
   const fileInputRef = useRef<HTMLInputElement>(null)
+
   const [imageSrc, setImageSrc] = useState<string | null>(null)
 
   const onFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,7 +23,7 @@ export function ImageForm() {
   return (
     <div className="relative">
       {!imageSrc && (
-        <div className="flex h-20 w-full flex-col items-center justify-center rounded-lg border bg-blue-200">
+        <div className="flex h-20 w-full flex-col items-center justify-center rounded-lg bg-blue-200">
           <div>
             <ArrowUpFromLineIcon className="m-auto h-4 w-4 opacity-80" />
             <div className="text-center text-xs opacity-80">{"画像を追加"}</div>
@@ -30,7 +34,7 @@ export function ImageForm() {
         <img
           src={imageSrc}
           alt="Uploaded"
-          className="flex h-20 w-full flex-col items-center justify-center rounded-lg border"
+          className="flex h-20 w-full flex-col items-center justify-center rounded-lg"
         />
       )}
       <input
