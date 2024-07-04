@@ -1,5 +1,5 @@
 import { BloodTypeSelect } from "./blood-type-select"
-import { DateSelect } from "./date-select"
+import { BirthDaySelect } from "./birth-day-select"
 import { ImageForm } from "./image-form"
 import { MbtiSelect } from "./mbti-select"
 import { ProfileFormItemText } from "./profile-form-item-text"
@@ -53,7 +53,7 @@ export function ProfileForm() {
         <div className="flex flex-col gap-y-1">
           <div className="flex items-center gap-x-1">
             <p className="text-xs">{"わたしは"}</p>
-            <DateSelect className="h-6 flex-1 bg-blue-200 text-xs" />
+            <BirthDaySelect className="h-6 flex-1 bg-blue-200 text-xs" />
             <p className="text-xs">{"生まれで、今は"}</p>
             <ProfileFormItemText
               title="現在地"

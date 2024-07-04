@@ -1,5 +1,5 @@
 import { BloodTypeSelect } from "./blood-type-select"
-import { DateSelect } from "./date-select"
+import { BirthDaySelect } from "./birth-day-select"
 import { MbtiSelect } from "./mbti-select"
 import { ProfileFormItemText } from "./profile-form-item-text"
 import { ProfileTextAreaForm } from "./profile-textarea-form"
@@ -60,7 +60,7 @@ export function ProfilePopover() {
       <div className="flex flex-col space-y-1 border-b pb-2">
         <div className="flex items-center space-x-2">
           <p className="text-xs">{"わたしは"}</p>
-          <DateSelect className="h-6 w-28 bg-blue-200 text-xs" />
+          <BirthDaySelect className="h-6 w-28 bg-blue-200 text-xs" />
           <p className="text-xs">{"生まれの"}</p>
           <ProfileFormItemText title="職業" className="w-24" maxLength={10} />
           <p className="text-xs">{"です！"}</p>

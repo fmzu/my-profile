@@ -14,33 +14,25 @@ type Props = {
   className: string
 }
 
-export function DateSelect(props: Props) {
-  const [selected, setSelected] = useState("")
-
+export function BirthDaySelect(props: Props) {
   const [month, setMonth] = useState("")
 
   const [day, setDay] = useState("")
-
-  const handleStringToInt = (value: string) => {
-    setSelected(String(value))
-  }
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <input
           className={cn("rounded-md bg-blue-200", props.className)}
-          value={selected}
+          value={`${month}${day}`}
         />
       </PopoverTrigger>
       <PopoverContent className="flex flex-col space-y-2 bg-white">
         <div>
           <p className="text-sm">{"生年月日"}</p>
           <div className="flex items-center space-x-2">
-            <MonthSelect text={month} />
-            <p>{"月"}</p>
-            <DaySelect text={month} />
-            <p>{"日"}</p>
+            <MonthSelect month={month} setMonth={setMonth} />
+            <DaySelect day={day} setDay={setDay} />
           </div>
         </div>
         <div className="flex justify-end">
