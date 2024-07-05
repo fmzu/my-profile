@@ -6,12 +6,12 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "~/components/ui/popover"
-import {} from "~/components/ui/select"
 import { MonthSelect } from "./month-select"
 import { DaySelect } from "./day-select"
 
 type Props = {
   className: string
+  inputColor: string
 }
 
 export function BirthDaySelect(props: Props) {
@@ -23,7 +23,11 @@ export function BirthDaySelect(props: Props) {
     <Popover>
       <PopoverTrigger asChild>
         <input
-          className={cn("rounded-md bg-blue-200", props.className)}
+          className={cn(
+            "rounded-md bg-blue-200",
+            props.className,
+            props.inputColor,
+          )}
           value={`${month ? `${month}月` : ""}${day ? `${day}日` : ""}`}
         />
       </PopoverTrigger>

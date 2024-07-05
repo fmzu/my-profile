@@ -4,12 +4,21 @@ import { ImageForm } from "./image-form"
 import { MbtiSelect } from "./mbti-select"
 import { ProfileFormItemText } from "./profile-form-item-text"
 import { ProfileTextAreaForm } from "./profile-textarea-form"
+import { cn } from "~/components/ui/lib/utils"
 
-export function ProfileForm() {
+type Props = {
+  className: string
+  inputColor: string
+}
+
+export function ProfileForm(props: Props) {
   return (
     <div
       id="profile"
-      className="flex flex-col justify-center gap-y-2 border-gray-300 bg-blue-300 p-2"
+      className={cn(
+        "flex flex-col justify-center gap-y-2 p-2",
+        props.className,
+      )}
       style={{
         height: `${257 * 2}px`,
         width: `${182 * 2}px`,
@@ -26,6 +35,7 @@ export function ProfileForm() {
                   title="名前"
                   className="flex-1"
                   maxLength={20}
+                  inputColor={props.inputColor}
                 />
               </div>
               <div className="flex flex-1 items-center gap-x-2">
@@ -34,6 +44,7 @@ export function ProfileForm() {
                   title="Twitter"
                   className="flex-1"
                   maxLength={19}
+                  inputColor={props.inputColor}
                 />
               </div>
               <div className="flex flex-1 items-center gap-x-2">
@@ -42,23 +53,28 @@ export function ProfileForm() {
                   title="Instagram"
                   className="flex-1"
                   maxLength={18}
+                  inputColor={props.inputColor}
                 />
               </div>
             </div>
             <div className="w-1/5">
-              <ImageForm />
+              <ImageForm inputColor={props.inputColor} />
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-y-1">
           <div className="flex items-center gap-x-1">
             <p className="text-xs">{"わたしは"}</p>
-            <BirthDaySelect className="h-6 flex-1 bg-blue-200 text-xs" />
+            <BirthDaySelect
+              className="h-6 flex-1 text-xs"
+              inputColor={props.inputColor}
+            />
             <p className="text-xs">{"生まれで、今は"}</p>
             <ProfileFormItemText
               title="現在地"
               className="flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="flex items-center gap-x-1">
@@ -67,19 +83,27 @@ export function ProfileForm() {
               title="ニックネーム"
               className="flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
             <p className="text-xs">{"って呼んでください！"}</p>
             <p className="text-xs">{"血液型は"}</p>
           </div>
           <div className="flex items-center gap-x-1">
-            <BloodTypeSelect className="h-6 w-10 flex-none" />
+            <BloodTypeSelect
+              className="h-6 w-10 flex-none"
+              inputColor={props.inputColor}
+            />
             <p className="text-xs">{"型で、MBTIは"}</p>
-            <MbtiSelect className="h-6 w-14 flex-none" />
+            <MbtiSelect
+              className="h-6 w-14 flex-none"
+              inputColor={props.inputColor}
+            />
             <p className="text-xs">{"の、"}</p>
             <ProfileFormItemText
               title="性格"
               className="flex-1"
               maxLength={8}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="flex items-center gap-x-1">
@@ -88,6 +112,7 @@ export function ProfileForm() {
               title="好きなもの"
               className="flex-1"
               maxLength={12}
+              inputColor={props.inputColor}
             />
             <p className="text-xs">{"が好きです！"}</p>
           </div>
@@ -97,6 +122,7 @@ export function ProfileForm() {
               title="活動拠点"
               className="flex-1"
               maxLength={8}
+              inputColor={props.inputColor}
             />
             <p className="text-xs">{"に浮上してます！"}</p>
             <p className="text-xs">{"よろしくお願いします！"}</p>
@@ -109,6 +135,7 @@ export function ProfileForm() {
               title="食べ物"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -117,6 +144,7 @@ export function ProfileForm() {
               title="飲み物"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -125,6 +153,7 @@ export function ProfileForm() {
               title="映画"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -133,6 +162,7 @@ export function ProfileForm() {
               title="有名人"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -141,6 +171,7 @@ export function ProfileForm() {
               title="色"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -149,6 +180,7 @@ export function ProfileForm() {
               title="ゲーム"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -157,6 +189,7 @@ export function ProfileForm() {
               title="どうぶつ"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -165,6 +198,7 @@ export function ProfileForm() {
               title="曲"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
           <div className="grid gap-y-1">
@@ -173,12 +207,17 @@ export function ProfileForm() {
               title="場所"
               className="h-8 flex-1"
               maxLength={6}
+              inputColor={props.inputColor}
             />
           </div>
         </div>
         <div>
           <p className="text-xs">{"自由記載"}</p>
-          <ProfileTextAreaForm title={"自由記載"} maxLength={50} />
+          <ProfileTextAreaForm
+            title={"自由記載"}
+            maxLength={50}
+            inputColor={props.inputColor}
+          />
         </div>
       </div>
     </div>

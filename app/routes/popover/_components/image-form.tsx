@@ -1,10 +1,16 @@
 import { ArrowUpFromLineIcon } from "lucide-react"
 import { useRef, useState } from "react"
+import { cn } from "~/components/ui/lib/utils"
+
+type Props = {
+  inputColor: string
+}
+
 /**
  * アイコン画像をアップロードする
  * @returns
  */
-export function ImageForm() {
+export function ImageForm(props: Props) {
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [imageSrc, setImageSrc] = useState<string | null>(null)
@@ -23,7 +29,12 @@ export function ImageForm() {
   return (
     <div className="relative">
       {!imageSrc && (
-        <div className="flex h-20 w-full flex-col items-center justify-center rounded-lg bg-blue-200">
+        <div
+          className={cn(
+            "flex h-20 w-full flex-col items-center justify-center rounded-lg",
+            props.inputColor,
+          )}
+        >
           <div>
             <ArrowUpFromLineIcon className="m-auto h-4 w-4 opacity-80" />
             <div className="text-center text-xs opacity-80">{"画像を追加"}</div>

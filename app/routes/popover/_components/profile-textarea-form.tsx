@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Button } from "~/components/ui/button"
+import { cn } from "~/components/ui/lib/utils"
 import {
   Popover,
   PopoverContent,
@@ -10,6 +11,7 @@ import { Textarea } from "~/components/ui/textarea"
 type Props = {
   title: string
   maxLength: number
+  inputColor: string
 }
 
 export function ProfileTextAreaForm(props: Props) {
@@ -18,7 +20,10 @@ export function ProfileTextAreaForm(props: Props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <input className="h-12 w-full rounded-md bg-blue-200" value={text} />
+        <input
+          className={cn("h-12 w-full rounded-md", props.inputColor)}
+          value={text}
+        />
       </PopoverTrigger>
       <PopoverContent className="flex flex-col space-y-2 bg-white">
         <div>

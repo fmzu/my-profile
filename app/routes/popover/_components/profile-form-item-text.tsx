@@ -12,6 +12,7 @@ type Props = {
   className: string
   title: string
   maxLength: number
+  inputColor: string
 }
 
 export function ProfileFormItemText(props: Props) {
@@ -21,7 +22,11 @@ export function ProfileFormItemText(props: Props) {
     <Popover>
       <PopoverTrigger asChild>
         <input
-          className={cn("h-6 rounded-md bg-blue-200 text-xl", props.className)}
+          className={cn(
+            "h-6 rounded-md text-xl",
+            props.className,
+            props.inputColor,
+          )}
           value={text}
         />
       </PopoverTrigger>
