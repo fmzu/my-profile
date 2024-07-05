@@ -27,8 +27,16 @@ export function ProfileTextAreaForm(props: Props) {
             <Textarea
               placeholder={props.title}
               onChange={(event) => {
-                if (event.target.value.length <= props.maxLength) {
-                  setText(event.target.value)
+                const inputValue = event.target.value
+                let formattedValue = inputValue
+                if (inputValue.length > 10) {
+                  // Split the input value into chunks of 10 characters
+                  const parts = inputValue.match(/.{1,24}/g) || []
+                  // Join the parts with a newline character
+                  formattedValue = parts.join("\n")
+                }
+                if (formattedValue.length <= props.maxLength) {
+                  setText(formattedValue)
                 }
               }}
             />

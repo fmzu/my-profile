@@ -214,7 +214,7 @@ export function ProfilePopover() {
           <p className="text-white">{"FREE SPACE"}</p>
           <p className="text-xs opacity-50">{"ここは自由に記載してください"}</p>
         </div>
-        <ProfileTextAreaForm title="自由記載" />
+        <ProfileTextAreaForm title="自由記載" maxLength={50} />
       </div>
     </div>
   )

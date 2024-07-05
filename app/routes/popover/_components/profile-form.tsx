@@ -25,7 +25,7 @@ export function ProfileForm() {
                 <ProfileFormItemText
                   title="名前"
                   className="flex-1"
-                  maxLength={26}
+                  maxLength={20}
                 />
               </div>
               <div className="flex flex-1 items-center gap-x-2">
@@ -33,7 +33,7 @@ export function ProfileForm() {
                 <ProfileFormItemText
                   title="Twitter"
                   className="flex-1"
-                  maxLength={25}
+                  maxLength={19}
                 />
               </div>
               <div className="flex flex-1 items-center gap-x-2">
@@ -41,7 +41,7 @@ export function ProfileForm() {
                 <ProfileFormItemText
                   title="Instagram"
                   className="flex-1"
-                  maxLength={24}
+                  maxLength={18}
                 />
               </div>
             </div>
@@ -58,15 +58,15 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="現在地"
               className="flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="flex items-center gap-x-1">
             <p className="text-xs">{"に住んでます！"}</p>
             <ProfileFormItemText
-              title="現在地"
+              title="ニックネーム"
               className="flex-1"
-              maxLength={12}
+              maxLength={6}
             />
             <p className="text-xs">{"って呼んでください！"}</p>
             <p className="text-xs">{"血液型は"}</p>
@@ -79,7 +79,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="性格"
               className="flex-1"
-              maxLength={16}
+              maxLength={8}
             />
           </div>
           <div className="flex items-center gap-x-1">
@@ -87,7 +87,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="好きなもの"
               className="flex-1"
-              maxLength={24}
+              maxLength={12}
             />
             <p className="text-xs">{"が好きです！"}</p>
           </div>
@@ -96,7 +96,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="活動拠点"
               className="flex-1"
-              maxLength={15}
+              maxLength={8}
             />
             <p className="text-xs">{"に浮上してます！"}</p>
             <p className="text-xs">{"よろしくお願いします！"}</p>
@@ -108,7 +108,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="食べ物"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -116,7 +116,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="飲み物"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -124,7 +124,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="映画"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -132,7 +132,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="有名人"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -140,7 +140,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="色"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -148,7 +148,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="ゲーム"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -156,7 +156,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="どうぶつ"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -164,7 +164,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="曲"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
           <div className="grid gap-y-1">
@@ -172,7 +172,7 @@ export function ProfileForm() {
             <ProfileFormItemText
               title="場所"
               className="h-8 flex-1"
-              maxLength={11}
+              maxLength={6}
             />
           </div>
         </div>
