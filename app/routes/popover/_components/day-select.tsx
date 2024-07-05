@@ -21,7 +21,6 @@ export function DaySelect(props: Props) {
   return (
     <Select
       onValueChange={(value) => {
-        console.log(value)
         props.setDay(value)
       }}
     >

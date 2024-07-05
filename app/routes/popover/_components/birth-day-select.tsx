@@ -24,7 +24,7 @@ export function BirthDaySelect(props: Props) {
       <PopoverTrigger asChild>
         <input
           className={cn("rounded-md bg-blue-200", props.className)}
-          value={`${month}${day}`}
+          value={`${month ? `${month}月` : ""}${day ? `${day}日` : ""}`}
         />
       </PopoverTrigger>
       <PopoverContent className="flex flex-col space-y-2 bg-white">
