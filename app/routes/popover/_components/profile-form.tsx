@@ -9,7 +9,7 @@ export function ProfileForm() {
   return (
     <div
       id="profile"
-      className="flex flex-col gap-y-2 border-gray-300 bg-blue-300 p-2"
+      className="flex flex-col justify-center gap-y-2 border-gray-300 bg-blue-300 p-2"
       style={{
         height: `${257 * 2}px`,
         width: `${182 * 2}px`,

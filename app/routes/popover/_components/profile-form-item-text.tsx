@@ -21,7 +21,7 @@ export function ProfileFormItemText(props: Props) {
     <Popover>
       <PopoverTrigger asChild>
         <input
-          className={cn("rounded-md bg-blue-200", props.className)}
+          className={cn("h-6 rounded-md bg-blue-200 text-xl", props.className)}
           value={text}
         />
       </PopoverTrigger>
@@ -33,6 +33,7 @@ export function ProfileFormItemText(props: Props) {
               placeholder={props.title}
               onChange={(event) => {
                 if (event.target.value.length <= props.maxLength) {
+                  console.log("aaa", props.maxLength)
                   setText(event.target.value)
                 }
               }}
