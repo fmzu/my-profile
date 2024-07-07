@@ -33,7 +33,7 @@ export function BloodTypeSelect(props: Props) {
       <PopoverTrigger asChild>
         <input
           className={cn(
-            "rounded-md bg-blue-200",
+            "h-6 rounded-md bg-blue-200",
             props.className,
             props.inputColor,
           )}

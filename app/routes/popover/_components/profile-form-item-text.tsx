@@ -23,7 +23,7 @@ export function ProfileFormItemText(props: Props) {
       <PopoverTrigger asChild>
         <input
           className={cn(
-            "h-6 rounded-md text-xl",
+            "h-6 flex-1 rounded-md text-xl",
             props.className,
             props.inputColor,
           )}

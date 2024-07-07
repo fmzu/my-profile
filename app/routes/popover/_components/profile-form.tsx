@@ -33,25 +33,25 @@ export function ProfileForm(props: Props) {
                 <p className="min-w-fit text-xs">{"名前"}</p>
                 <ProfileFormItemText
                   title="名前"
-                  className="flex-1"
+                  className=""
                   maxLength={20}
                   inputColor={props.inputColor}
                 />
               </div>
-              <div className="flex flex-1 items-center gap-x-2">
+              <div className="flex items-center gap-x-2">
                 <p className="text-xs">{"Twitter"}</p>
                 <ProfileFormItemText
                   title="Twitter"
-                  className="flex-1"
+                  className=""
                   maxLength={19}
                   inputColor={props.inputColor}
                 />
               </div>
-              <div className="flex flex-1 items-center gap-x-2">
+              <div className="flex items-center gap-x-2">
                 <p className="text-xs">{"Instagram"}</p>
                 <ProfileFormItemText
                   title="Instagram"
-                  className="flex-1"
+                  className=""
                   maxLength={18}
                   inputColor={props.inputColor}
                 />
@@ -66,13 +66,13 @@ export function ProfileForm(props: Props) {
           <div className="flex items-center gap-x-1">
             <p className="text-xs">{"わたしは"}</p>
             <BirthDaySelect
-              className="h-6 flex-1 text-xs"
+              className=" text-xs"
               inputColor={props.inputColor}
             />
             <p className="text-xs">{"生まれで、今は"}</p>
             <ProfileFormItemText
               title="現在地"
-              className="flex-1"
+              className=""
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -81,7 +81,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"に住んでます！"}</p>
             <ProfileFormItemText
               title="ニックネーム"
-              className="flex-1"
+              className=""
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -90,18 +90,18 @@ export function ProfileForm(props: Props) {
           </div>
           <div className="flex items-center gap-x-1">
             <BloodTypeSelect
-              className="h-6 w-10 flex-none"
+              className="w-10 flex-none"
               inputColor={props.inputColor}
             />
             <p className="text-xs">{"型で、MBTIは"}</p>
             <MbtiSelect
-              className="h-6 w-14 flex-none"
+              className="w-14 flex-none"
               inputColor={props.inputColor}
             />
             <p className="text-xs">{"の、"}</p>
             <ProfileFormItemText
               title="性格"
-              className="flex-1"
+              className=""
               maxLength={8}
               inputColor={props.inputColor}
             />
@@ -110,7 +110,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"な性格です！"}</p>
             <ProfileFormItemText
               title="好きなもの"
-              className="flex-1"
+              className=""
               maxLength={12}
               inputColor={props.inputColor}
             />
@@ -120,7 +120,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"よく"}</p>
             <ProfileFormItemText
               title="活動拠点"
-              className="flex-1"
+              className=""
               maxLength={8}
               inputColor={props.inputColor}
             />
@@ -133,7 +133,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"食べ物"}</p>
             <ProfileFormItemText
               title="食べ物"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -142,7 +142,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"飲み物"}</p>
             <ProfileFormItemText
               title="飲み物"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -151,7 +151,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"映画"}</p>
             <ProfileFormItemText
               title="映画"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -160,7 +160,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"有名人"}</p>
             <ProfileFormItemText
               title="有名人"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -169,7 +169,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"色"}</p>
             <ProfileFormItemText
               title="色"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -178,7 +178,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"ゲーム"}</p>
             <ProfileFormItemText
               title="ゲーム"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -187,7 +187,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"どうぶつ"}</p>
             <ProfileFormItemText
               title="どうぶつ"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -196,7 +196,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"曲"}</p>
             <ProfileFormItemText
               title="曲"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />
@@ -205,7 +205,7 @@ export function ProfileForm(props: Props) {
             <p className="text-xs">{"場所"}</p>
             <ProfileFormItemText
               title="場所"
-              className="h-8 flex-1"
+              className="h-8 "
               maxLength={6}
               inputColor={props.inputColor}
             />

@@ -24,7 +24,7 @@ export function BirthDaySelect(props: Props) {
       <PopoverTrigger asChild>
         <input
           className={cn(
-            "rounded-md bg-blue-200",
+            "h-6 flex-1 rounded-md bg-blue-200",
             props.className,
             props.inputColor,
           )}
