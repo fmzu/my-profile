@@ -38,7 +38,6 @@ export function ProfileFormItemText(props: Props) {
               placeholder={props.title}
               onChange={(event) => {
                 if (event.target.value.length <= props.maxLength) {
-                  console.log("aaa", props.maxLength)
                   setText(event.target.value)
                 }
               }}
