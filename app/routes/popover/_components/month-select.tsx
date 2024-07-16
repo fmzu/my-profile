@@ -14,12 +14,12 @@ type Props = {
   setMonth: (value: string) => void
 }
 export function MonthSelect(props: Props) {
-  const handleStringToInt = (value: string) => {
-    props.setMonth(String(value))
-  }
-
   return (
-    <Select onValueChange={handleStringToInt}>
+    <Select
+      onValueChange={(value) => {
+        props.setMonth(value)
+      }}
+    >
       <SelectTrigger>
         <SelectValue placeholder="誕生月" />
       </SelectTrigger>

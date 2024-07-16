@@ -14,10 +14,6 @@ type Props = {
 }
 
 export function DaySelect(props: Props) {
-  const handleStringToInt = (value: string) => {
-    props.setDay(String(value))
-  }
-
   return (
     <Select
       onValueChange={(value) => {
@@ -27,7 +23,7 @@ export function DaySelect(props: Props) {
       <SelectTrigger>
         <SelectValue placeholder="誕生日" />
       </SelectTrigger>
-      <SelectContent className="bg-white">
+      <SelectContent className="h-64 bg-white">
         <SelectGroup>
           <SelectLabel>{"誕生日"}</SelectLabel>
           {Array.from({ length: 31 }, (_, i) => (
