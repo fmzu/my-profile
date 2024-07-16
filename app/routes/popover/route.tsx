@@ -1,7 +1,7 @@
 import { ProfileImage } from "./_components/profile-image"
 import { ProfileForm } from "./_components/profile-form"
-import { ColorSelectButton } from "./_components/color-select-button"
 import { useState } from "react"
+import { ColorSelects } from "./_components/color-selects"
 
 export default function PopoverPage() {
   // 背景色を管理する状態
@@ -11,7 +11,7 @@ export default function PopoverPage() {
 
   return (
     <div className="flex flex-col items-center space-y-2 pt-8">
-      <ColorSelectButton
+      <ColorSelects
         bgColor={bgColor}
         setBgColor={setBgColor}
         inputColor={inputColor}
