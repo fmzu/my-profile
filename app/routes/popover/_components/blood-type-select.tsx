@@ -28,9 +28,15 @@ export function BloodTypeSelect(props: Props) {
     setSelected(String(value))
   }
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = () => setIsOpen(true)
+
+  const closeModal = () => setIsOpen(false)
+
   return (
     <Popover>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild onClick={openModal}>
         <input
           className={cn(
             "h-6 rounded-md bg-blue-200",
@@ -40,28 +46,32 @@ export function BloodTypeSelect(props: Props) {
           value={selected}
         />
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col space-y-2 bg-white">
-        <div>
-          <p className="text-sm">{"血液型"}</p>
-          <Select onValueChange={handleStringToInt}>
-            <SelectTrigger>
-              <SelectValue placeholder="血液型" />
-            </SelectTrigger>
-            <SelectContent className="bg-white">
-              <SelectGroup>
-                <SelectLabel>{"血液型"}</SelectLabel>
-                <SelectItem value="A">{"A"}</SelectItem>
-                <SelectItem value="B">{"B"}</SelectItem>
-                <SelectItem value="O">{"O"}</SelectItem>
-                <SelectItem value="AB">{"AB"}</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="flex justify-end">
-          <Button variant={"outline"}>{"保存"}</Button>
-        </div>
-      </PopoverContent>
+      {isOpen && (
+        <PopoverContent className="flex flex-col space-y-2 bg-white">
+          <div>
+            <p className="text-sm">{"血液型"}</p>
+            <Select onValueChange={handleStringToInt}>
+              <SelectTrigger>
+                <SelectValue placeholder="血液型" />
+              </SelectTrigger>
+              <SelectContent className="bg-white">
+                <SelectGroup>
+                  <SelectLabel>{"血液型"}</SelectLabel>
+                  <SelectItem value="A">{"A"}</SelectItem>
+                  <SelectItem value="B">{"B"}</SelectItem>
+                  <SelectItem value="O">{"O"}</SelectItem>
+                  <SelectItem value="AB">{"AB"}</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex justify-end">
+            <Button variant={"outline"} onClick={closeModal}>
+              {"保存"}
+            </Button>
+          </div>
+        </PopoverContent>
+      )}
     </Popover>
   )
 }

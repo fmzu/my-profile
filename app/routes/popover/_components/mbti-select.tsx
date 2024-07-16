@@ -28,9 +28,15 @@ export function MbtiSelect(props: Props) {
     setSelected(String(value))
   }
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = () => setIsOpen(true)
+
+  const closeModal = () => setIsOpen(false)
+
   return (
     <Popover>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild onClick={openModal}>
         <input
           className={cn(
             "h-6 rounded-md bg-blue-200",
@@ -40,40 +46,44 @@ export function MbtiSelect(props: Props) {
           value={selected}
         />
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col space-y-2 bg-white">
-        <div>
-          <p className="text-sm">{"MBTI"}</p>
-          <Select onValueChange={handleStringToInt}>
-            <SelectTrigger>
-              <SelectValue placeholder="MBTI" />
-            </SelectTrigger>
-            <SelectContent className="h-64 bg-white">
-              <SelectGroup>
-                <SelectLabel>{"MBTI"}</SelectLabel>
-                <SelectItem value="INTJ">{"INTJ"}</SelectItem>
-                <SelectItem value="INTP">{"INTP"}</SelectItem>
-                <SelectItem value="ENTJ">{"ENTJ"}</SelectItem>
-                <SelectItem value="ENTP">{"ENTP"}</SelectItem>
-                <SelectItem value="ISTP">{"ISTP"}</SelectItem>
-                <SelectItem value="ISFP">{"ISFP"}</SelectItem>
-                <SelectItem value="ESTP">{"ESTP"}</SelectItem>
-                <SelectItem value="ESFP">{"ESFP"}</SelectItem>
-                <SelectItem value="ISTJ">{"ISTJ"}</SelectItem>
-                <SelectItem value="ISFJ">{"ISFJ"}</SelectItem>
-                <SelectItem value="ESTJ">{"ESTJ"}</SelectItem>
-                <SelectItem value="ESFJ">{"ESFJ"}</SelectItem>
-                <SelectItem value="INFJ">{"INFJ"}</SelectItem>
-                <SelectItem value="INFP">{"INFP"}</SelectItem>
-                <SelectItem value="ENFJ">{"ENFJ"}</SelectItem>
-                <SelectItem value="ENFP">{"ENFP"}</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="flex justify-end">
-          <Button variant={"outline"}>{"保存"}</Button>
-        </div>
-      </PopoverContent>
+      {isOpen && (
+        <PopoverContent className="flex flex-col space-y-2 bg-white">
+          <div>
+            <p className="text-sm">{"MBTI"}</p>
+            <Select onValueChange={handleStringToInt}>
+              <SelectTrigger>
+                <SelectValue placeholder="MBTI" />
+              </SelectTrigger>
+              <SelectContent className="h-64 bg-white">
+                <SelectGroup>
+                  <SelectLabel>{"MBTI"}</SelectLabel>
+                  <SelectItem value="INTJ">{"INTJ"}</SelectItem>
+                  <SelectItem value="INTP">{"INTP"}</SelectItem>
+                  <SelectItem value="ENTJ">{"ENTJ"}</SelectItem>
+                  <SelectItem value="ENTP">{"ENTP"}</SelectItem>
+                  <SelectItem value="ISTP">{"ISTP"}</SelectItem>
+                  <SelectItem value="ISFP">{"ISFP"}</SelectItem>
+                  <SelectItem value="ESTP">{"ESTP"}</SelectItem>
+                  <SelectItem value="ESFP">{"ESFP"}</SelectItem>
+                  <SelectItem value="ISTJ">{"ISTJ"}</SelectItem>
+                  <SelectItem value="ISFJ">{"ISFJ"}</SelectItem>
+                  <SelectItem value="ESTJ">{"ESTJ"}</SelectItem>
+                  <SelectItem value="ESFJ">{"ESFJ"}</SelectItem>
+                  <SelectItem value="INFJ">{"INFJ"}</SelectItem>
+                  <SelectItem value="INFP">{"INFP"}</SelectItem>
+                  <SelectItem value="ENFJ">{"ENFJ"}</SelectItem>
+                  <SelectItem value="ENFP">{"ENFP"}</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex justify-end">
+            <Button variant={"outline"} onClick={closeModal}>
+              {"保存"}
+            </Button>
+          </div>
+        </PopoverContent>
+      )}
     </Popover>
   )
 }

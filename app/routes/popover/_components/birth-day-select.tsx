@@ -19,9 +19,15 @@ export function BirthDaySelect(props: Props) {
 
   const [day, setDay] = useState("")
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = () => setIsOpen(true)
+
+  const closeModal = () => setIsOpen(false)
+
   return (
     <Popover>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild onClick={openModal}>
         <input
           className={cn(
             "h-6 flex-1 rounded-md bg-blue-200",
@@ -31,18 +37,22 @@ export function BirthDaySelect(props: Props) {
           value={`${month ? `${month}月` : ""}${day ? `${day}日` : ""}`}
         />
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col space-y-2 bg-white">
-        <div>
-          <p className="text-sm">{"生年月日"}</p>
-          <div className="flex items-center space-x-2">
-            <MonthSelect month={month} setMonth={setMonth} />
-            <DaySelect day={day} setDay={setDay} />
+      {isOpen && (
+        <PopoverContent className="flex flex-col space-y-2 bg-white">
+          <div>
+            <p className="text-sm">{"生年月日"}</p>
+            <div className="flex items-center space-x-2">
+              <MonthSelect month={month} setMonth={setMonth} />
+              <DaySelect day={day} setDay={setDay} />
+            </div>
           </div>
-        </div>
-        <div className="flex justify-end">
-          <Button variant={"outline"}>{"保存"}</Button>
-        </div>
-      </PopoverContent>
+          <div className="flex justify-end">
+            <Button variant={"outline"} onClick={closeModal}>
+              {"保存"}
+            </Button>
+          </div>
+        </PopoverContent>
+      )}
     </Popover>
   )
 }
