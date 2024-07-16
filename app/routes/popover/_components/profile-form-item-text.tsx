@@ -18,9 +18,15 @@ type Props = {
 export function ProfileFormItemText(props: Props) {
   const [text, setText] = useState("")
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = () => setIsOpen(true)
+
+  const closeModal = () => setIsOpen(false)
+
   return (
     <Popover>
-      <PopoverTrigger asChild>
+      <PopoverTrigger asChild onClick={openModal}>
         <input
           className={cn(
             "h-6 flex-1 rounded-md text-xl",
@@ -30,25 +36,29 @@ export function ProfileFormItemText(props: Props) {
           value={text}
         />
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col space-y-2 bg-white">
-        <div>
-          <p className="text-sm">{props.title}</p>
-          <div className="flex items-end space-x-1">
-            <Input
-              placeholder={props.title}
-              onChange={(event) => {
-                if (event.target.value.length <= props.maxLength) {
-                  setText(event.target.value)
-                }
-              }}
-            />
+      {isOpen && (
+        <PopoverContent className="flex flex-col space-y-2 bg-white">
+          <div>
+            <p className="text-sm">{props.title}</p>
+            <div className="flex items-end space-x-1">
+              <Input
+                placeholder={props.title}
+                onChange={(event) => {
+                  if (event.target.value.length <= props.maxLength) {
+                    setText(event.target.value)
+                  }
+                }}
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex items-end justify-end space-x-1">
-          <p className="text-xs">{`${props.maxLength - text.length}`}</p>
-          <Button variant={"outline"}>{"保存"}</Button>
-        </div>
-      </PopoverContent>
+          <div className="flex items-end justify-end space-x-1">
+            <p className="text-xs">{`${props.maxLength - text.length}`}</p>
+            <Button variant={"outline"} onClick={closeModal}>
+              {"保存"}
+            </Button>
+          </div>
+        </PopoverContent>
+      )}
     </Popover>
   )
 }
