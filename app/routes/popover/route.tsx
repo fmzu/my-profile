@@ -5,9 +5,9 @@ import { ColorSelects } from "./_components/color-selects"
 
 export default function PopoverPage() {
   // 背景色を管理する状態
-  const [bgColor, setBgColor] = useState("bg-blue-300")
+  const [bgColor, setBgColor] = useState("bg-sky-300")
 
-  const [inputColor, setInputColor] = useState("bg-blue-200")
+  const [inputColor, setInputColor] = useState("bg-sky-200")
 
   return (
     <div className="flex flex-col items-center space-y-2 pt-8">

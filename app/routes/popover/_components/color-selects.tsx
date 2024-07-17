@@ -29,14 +29,14 @@ export function ColorSelects(props: Props) {
         setInputColor={props.setInputColor}
       />
       <ColorSelectButton
-        bgColor={"bg-blue-300"}
-        inputColor={"bg-blue-200"}
+        bgColor={"bg-sky-300"}
+        inputColor={"bg-sky-200"}
         setBgColor={props.setBgColor}
         setInputColor={props.setInputColor}
       />
       <ColorSelectButton
-        bgColor={"bg-purple-300"}
-        inputColor={"bg-purple-200"}
+        bgColor={"bg-violet-300"}
+        inputColor={"bg-violet-200"}
         setBgColor={props.setBgColor}
         setInputColor={props.setInputColor}
       />
