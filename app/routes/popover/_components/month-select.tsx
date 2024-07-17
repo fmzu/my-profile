@@ -23,7 +23,7 @@ export function MonthSelect(props: Props) {
       <SelectTrigger>
         <SelectValue placeholder="誕生月" />
       </SelectTrigger>
-      <SelectContent className="bg-white">
+      <SelectContent className="h-64 bg-white">
         <SelectGroup>
           <SelectLabel>{"誕生月"}</SelectLabel>
           {Array.from({ length: 12 }, (_, i) => (
