@@ -15,6 +15,7 @@ export function ProfileIntroduction(props: Props) {
         <BirthDaySelect className=" text-xs" inputColor={props.inputColor} />
         <p className="text-xs">{"生まれで、今は"}</p>
         <ProfileFormItemText
+          id={""}
           title="現在地"
           className=""
           maxLength={6}
@@ -24,6 +25,7 @@ export function ProfileIntroduction(props: Props) {
       <div className="flex items-center gap-x-1">
         <p className="text-xs">{"に住んでます！"}</p>
         <ProfileFormItemText
+          id={""}
           title="ニックネーム"
           className=""
           maxLength={6}
@@ -41,6 +43,7 @@ export function ProfileIntroduction(props: Props) {
         <MbtiSelect className="w-14 flex-none" inputColor={props.inputColor} />
         <p className="text-xs">{"の、"}</p>
         <ProfileFormItemText
+          id={""}
           title="性格"
           className=""
           maxLength={8}
@@ -50,6 +53,7 @@ export function ProfileIntroduction(props: Props) {
       <div className="flex items-center gap-x-1">
         <p className="text-xs">{"な性格です！"}</p>
         <ProfileFormItemText
+          id={""}
           title="好きなもの"
           className=""
           maxLength={12}
@@ -60,6 +64,7 @@ export function ProfileIntroduction(props: Props) {
       <div className="flex items-center gap-x-1">
         <p className="text-xs">{"よく"}</p>
         <ProfileFormItemText
+          id={""}
           title="活動拠点"
           className=""
           maxLength={8}

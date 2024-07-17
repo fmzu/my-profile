@@ -42,9 +42,9 @@ export function ProfileTextAreaForm(props: Props) {
                   const inputValue = event.target.value
                   let formattedValue = inputValue
                   if (inputValue.length > 10) {
-                    // Split the input value into chunks of 10 characters
+                    // 入力値を10文字のチャンクに分割する
                     const parts = inputValue.match(/.{1,24}/g) || []
-                    // Join the parts with a newline character
+                    // 改行を追加して結合する
                     formattedValue = parts.join("\n")
                   }
                   if (formattedValue.length <= props.maxLength) {
