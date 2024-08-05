@@ -6,7 +6,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Yomogi"', ...fontFamily.sans],
+        sans: [
+          "Yomogi",
+          "Zen Kurenaido",
+          "M PLUS Rounded 1c",
+          "Yusei Magic",
+          "DotGothic16",
+          "Tsukimi Rounded",
+          ...fontFamily.sans,
+        ],
       },
     },
   },

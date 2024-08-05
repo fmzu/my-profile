@@ -83,7 +83,7 @@ export function ProfileForm(props: Props) {
               <ProfileFormItemText
                 id={""}
                 title={item.label}
-                className="h-8"
+                className=""
                 maxLength={6}
                 inputColor={props.inputColor}
               />

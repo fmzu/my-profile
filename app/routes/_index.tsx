@@ -3,6 +3,7 @@ import { useState } from "react"
 import { ColorSelects } from "./popover/_components/color-selects"
 import { ProfileForm } from "./popover/_components/profile-form"
 import { ProfileImage } from "./popover/_components/profile-image"
+import { FontSelects } from "./popover/_components/font-selects"
 
 export const meta: MetaFunction = () => {
   return [
@@ -17,6 +18,8 @@ export default function Index() {
 
   const [inputColor, setInputColor] = useState("bg-sky-200")
 
+  const [font, setFont] = useState("")
+
   return (
     <div className="flex flex-col items-center space-y-2 pt-8">
       <ColorSelects
@@ -25,6 +28,7 @@ export default function Index() {
         inputColor={inputColor}
         setInputColor={setInputColor}
       />
+      <FontSelects font={font} setFont={setFont} />
       <ProfileForm className={bgColor} inputColor={inputColor} />
       <ProfileImage />
     </div>
