@@ -1,9 +1,9 @@
 import type { MetaFunction } from "@remix-run/react"
 import { useState } from "react"
-import { ColorSelects } from "./popover/_components/color-selects"
-import { ProfileForm } from "./popover/_components/profile-form"
-import { ProfileImage } from "./popover/_components/profile-image"
-import { FontSelects } from "./popover/_components/font-selects"
+import { ColorSelects } from "./_componets/color-selects"
+import { ProfileForm } from "./_componets/profile-form"
+import { ProfileImage } from "./_componets/profile-image"
+import { FontSelects } from "./_componets/font-selects"
 
 export const meta: MetaFunction = () => {
   return [

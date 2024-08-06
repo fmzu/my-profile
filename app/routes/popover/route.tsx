@@ -1,7 +1,6 @@
-import { ProfileImage } from "./_components/profile-image"
-import { ProfileForm } from "./_components/profile-form"
+import { ProfileImage } from "../_componets/profile-image"
 import { useState } from "react"
-import { ColorSelects } from "./_components/color-selects"
+import { ColorSelects } from "../_componets/color-selects"
 
 export default function PopoverPage() {
   // 背景色を管理する状態
@@ -17,7 +16,7 @@ export default function PopoverPage() {
         inputColor={inputColor}
         setInputColor={setInputColor}
       />
-      <ProfileForm className={bgColor} inputColor={inputColor} />
+      {/* <ProfileForm className={bgColor} inputColor={inputColor} /> */}
       <ProfileImage />
     </div>
   )

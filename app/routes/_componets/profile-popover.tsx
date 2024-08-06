@@ -1,8 +1,7 @@
 import { BloodTypeSelect } from "./blood-type-select"
 import { BirthDaySelect } from "./birth-day-select"
-import { MbtiSelect } from "./mbti-select"
-import { ProfileFormItemText } from "./profile-form-item-text"
 import { ProfileTextAreaForm } from "./profile-textarea-form"
+import { ProfileFormItemText } from "./profile-form-item-text"
 
 /**
  * 今んとこ使ってないプロフィールテンテンプレート
