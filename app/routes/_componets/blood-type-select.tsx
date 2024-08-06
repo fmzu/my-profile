@@ -59,10 +59,10 @@ export function BloodTypeSelect(props: Props) {
               <SelectContent className="bg-white">
                 <SelectGroup style={{ fontFamily: props.font }}>
                   <SelectLabel>{"血液型"}</SelectLabel>
-                  <SelectItem value="A">{"A"}</SelectItem>
-                  <SelectItem value="B">{"B"}</SelectItem>
-                  <SelectItem value="O">{"O"}</SelectItem>
-                  <SelectItem value="AB">{"AB"}</SelectItem>
+                  <SelectItem value="A型">{"A型"}</SelectItem>
+                  <SelectItem value="B型">{"B型"}</SelectItem>
+                  <SelectItem value="O型">{"O型"}</SelectItem>
+                  <SelectItem value="AB型">{"AB型"}</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>

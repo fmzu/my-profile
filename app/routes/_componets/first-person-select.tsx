@@ -22,7 +22,7 @@ type Props = {
   font: string
 }
 
-export function FIrstPersonSelect(props: Props) {
+export function FirstPersonSelect(props: Props) {
   const [selected, setSelected] = useState("")
 
   const handleStringToInt = (value: string) => {

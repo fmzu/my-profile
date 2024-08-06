@@ -1,6 +1,6 @@
 import { BirthDaySelect } from "./birth-day-select"
 import { BloodTypeSelect } from "./blood-type-select"
-import { FIrstPersonSelect } from "./first-person-select"
+import { FirstPersonSelect } from "./first-person-select"
 import { MbtiSelect } from "./mbti-select"
 import { ProfileFormItemText } from "./profile-form-item-text"
 
@@ -16,18 +16,26 @@ export function ProfileIntroduction(props: Props) {
         className="flex items-center gap-x-1"
         style={{ fontFamily: props.font }}
       >
-        <FIrstPersonSelect
+        <FirstPersonSelect
           className="w-14 flex-none"
           inputColor={props.inputColor}
           font={props.font}
         />
         <p className="text-xs">{"は"}</p>
         <BirthDaySelect
-          className="text-xs"
+          className="w-14"
           inputColor={props.inputColor}
           font={props.font}
         />
-        <p className="text-xs">{"生まれで、今は"}</p>
+        <p className="text-xs">{"生まれの"}</p>
+        <BloodTypeSelect
+          className="w-10 flex-none"
+          inputColor={props.inputColor}
+          font={props.font}
+        />
+        <p className="text-xs">{"です！"}</p>
+      </div>
+      <div className="flex items-center gap-x-1">
         <ProfileFormItemText
           id={""}
           title="現在地"
@@ -36,8 +44,6 @@ export function ProfileIntroduction(props: Props) {
           inputColor={props.inputColor}
           font={props.font}
         />
-      </div>
-      <div className="flex items-center gap-x-1">
         <p className="text-xs">{"に住んでます！"}</p>
         <ProfileFormItemText
           id={""}
@@ -47,38 +53,31 @@ export function ProfileIntroduction(props: Props) {
           inputColor={props.inputColor}
           font={props.font}
         />
-        <p className="text-xs">{"って呼んでください！"}</p>
-        <p className="text-xs">{"血液型は"}</p>
       </div>
       <div className="flex items-center gap-x-1">
-        <BloodTypeSelect
-          className="w-10 flex-none"
+        <p className="text-xs">{"って呼んでください！"}</p>
+        <ProfileFormItemText
+          id={""}
+          title="性格"
+          className=""
+          maxLength={5}
           inputColor={props.inputColor}
           font={props.font}
         />
-        <p className="text-xs">{"型で、MBTIは"}</p>
+        <p className="text-xs">{"な性格です。MBTIは"}</p>
+      </div>
+      <div className="flex items-center gap-x-1">
         <MbtiSelect
           className="w-14 flex-none"
           inputColor={props.inputColor}
           font={props.font}
         />
-        <p className="text-xs">{"の、"}</p>
-        <ProfileFormItemText
-          id={""}
-          title="性格"
-          className=""
-          maxLength={8}
-          inputColor={props.inputColor}
-          font={props.font}
-        />
-      </div>
-      <div className="flex items-center gap-x-1">
-        <p className="text-xs">{"な性格です！"}</p>
+        <p className="text-xs">{"です。"}</p>
         <ProfileFormItemText
           id={""}
           title="好きなもの"
           className=""
-          maxLength={12}
+          maxLength={8}
           inputColor={props.inputColor}
           font={props.font}
         />

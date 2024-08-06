@@ -89,7 +89,7 @@ export function ProfileForm(props: Props) {
                 id={""}
                 title={item.label}
                 className=""
-                maxLength={6}
+                maxLength={5}
                 inputColor={props.inputColor}
                 font={props.font}
               />
@@ -100,7 +100,7 @@ export function ProfileForm(props: Props) {
           <p className="text-xs">{"自由記載"}</p>
           <ProfileTextAreaForm
             title={"自由記載"}
-            maxLength={50}
+            maxLength={40}
             inputColor={props.inputColor}
             font={props.font}
           />

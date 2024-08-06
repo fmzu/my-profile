@@ -24,11 +24,27 @@ export function ProfileTextAreaForm(props: Props) {
 
   const closeModal = () => setIsOpen(false)
 
+  const handlevalue = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const inputValue: string = event.target.value
+    let formattedValue: string = inputValue
+
+    if (inputValue.length > 20) {
+      // 入力値を10文字のチャンクに分割する
+      const parts: string[] = inputValue.match(/.{1,20}/g) || []
+      // 改行を追加して結合する
+      formattedValue = parts.join("\n")
+    }
+
+    if (formattedValue.length <= props.maxLength) {
+      setText(formattedValue)
+    }
+  }
+
   return (
     <Popover>
       <PopoverTrigger asChild onClick={openModal}>
         <input
-          className={cn("h-12 w-full rounded-md", props.inputColor)}
+          className={cn("h-20 w-full rounded-md", props.inputColor)}
           value={text}
           style={{ fontFamily: props.font }}
         />
@@ -42,19 +58,7 @@ export function ProfileTextAreaForm(props: Props) {
             <div className="flex items-end space-x-1">
               <Textarea
                 placeholder={props.title}
-                onChange={(event) => {
-                  const inputValue = event.target.value
-                  let formattedValue = inputValue
-                  if (inputValue.length > 10) {
-                    // 入力値を10文字のチャンクに分割する
-                    const parts = inputValue.match(/.{1,24}/g) || []
-                    // 改行を追加して結合する
-                    formattedValue = parts.join("\n")
-                  }
-                  if (formattedValue.length <= props.maxLength) {
-                    setText(formattedValue)
-                  }
-                }}
+                onChange={handlevalue}
                 style={{ fontFamily: props.font }}
               />
             </div>
