@@ -7,13 +7,13 @@ type Props = {
 
 export function FontSelects(props: Props) {
   const font = [
-    { font: "serif" },
-    { font: "Yomogi" },
+    { font: "Tsukimi Rounded" },
     { font: "Zen Kurenaido" },
-    { font: "M PLUS Rounded 1c" },
+    { font: "serif" },
     { font: "Yusei Magic" },
     { font: "DotGothic16" },
-    { font: "Tsukimi Rounded" },
+    { font: "Yomogi" },
+    { font: "Hachi Maru Pop" },
   ]
 
   return (

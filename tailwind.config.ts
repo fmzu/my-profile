@@ -13,6 +13,7 @@ export default {
           "Yusei Magic",
           "DotGothic16",
           "Tsukimi Rounded",
+          "Hachi Maru Pop",
           ...fontFamily.sans,
         ],
       },

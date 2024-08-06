@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Yusei+Magic&display=swap"
+          href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
           rel="stylesheet"
         />
         <link
@@ -39,6 +39,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"
           rel="stylesheet"
         />
         <meta charSet="utf-8" />

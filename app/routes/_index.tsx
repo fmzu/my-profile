@@ -18,7 +18,7 @@ export default function Index() {
 
   const [inputColor, setInputColor] = useState("bg-sky-200")
 
-  const [font, setFont] = useState("Yomogi")
+  const [font, setFont] = useState("serif")
 
   return (
     <div className="flex flex-col items-center space-y-2 pt-8">

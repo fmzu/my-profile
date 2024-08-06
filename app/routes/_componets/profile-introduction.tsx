@@ -1,5 +1,6 @@
 import { BirthDaySelect } from "./birth-day-select"
 import { BloodTypeSelect } from "./blood-type-select"
+import { FIrstPersonSelect } from "./first-person-select"
 import { MbtiSelect } from "./mbti-select"
 import { ProfileFormItemText } from "./profile-form-item-text"
 
@@ -15,9 +16,14 @@ export function ProfileIntroduction(props: Props) {
         className="flex items-center gap-x-1"
         style={{ fontFamily: props.font }}
       >
-        <p className="text-xs">{"わたしは"}</p>
+        <FIrstPersonSelect
+          className="w-14 flex-none"
+          inputColor={props.inputColor}
+          font={props.font}
+        />
+        <p className="text-xs">{"は"}</p>
         <BirthDaySelect
-          className=" text-xs"
+          className="text-xs"
           inputColor={props.inputColor}
           font={props.font}
         />
