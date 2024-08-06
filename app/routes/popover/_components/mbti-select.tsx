@@ -19,6 +19,7 @@ import {
 type Props = {
   className: string
   inputColor: string
+  font: string
 }
 
 export function MbtiSelect(props: Props) {
@@ -44,18 +45,19 @@ export function MbtiSelect(props: Props) {
             props.inputColor,
           )}
           value={selected}
+          style={{ fontFamily: props.font }}
         />
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent className="flex flex-col space-y-2 bg-white">
-          <div>
+          <div style={{ fontFamily: props.font }}>
             <p className="text-sm">{"MBTI"}</p>
             <Select onValueChange={handleStringToInt}>
               <SelectTrigger>
                 <SelectValue placeholder="MBTI" />
               </SelectTrigger>
               <SelectContent className="h-64 bg-white">
-                <SelectGroup>
+                <SelectGroup style={{ fontFamily: props.font }}>
                   <SelectLabel>{"MBTI"}</SelectLabel>
                   <SelectItem value="INTJ">{"INTJ"}</SelectItem>
                   <SelectItem value="INTP">{"INTP"}</SelectItem>
@@ -78,7 +80,11 @@ export function MbtiSelect(props: Props) {
             </Select>
           </div>
           <div className="flex justify-end">
-            <Button variant={"outline"} onClick={closeModal}>
+            <Button
+              variant={"outline"}
+              onClick={closeModal}
+              style={{ fontFamily: props.font }}
+            >
               {"保存"}
             </Button>
           </div>

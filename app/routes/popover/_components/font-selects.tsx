@@ -6,7 +6,7 @@ type Props = {
 }
 
 export function FontSelects(props: Props) {
-  const colors = [
+  const font = [
     { font: "serif" },
     { font: "Yomogi" },
     { font: "Zen Kurenaido" },
@@ -18,10 +18,10 @@ export function FontSelects(props: Props) {
 
   return (
     <div className="grid grid-cols-7 gap-2">
-      {colors.map((color) => (
+      {font.map((font) => (
         <FontSelectButton
-          key={color.font}
-          font={color.font}
+          key={font.font}
+          font={font.font}
           setFont={props.setFont}
         />
       ))}

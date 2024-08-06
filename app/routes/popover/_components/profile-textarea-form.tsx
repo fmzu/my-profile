@@ -12,6 +12,7 @@ type Props = {
   title: string
   maxLength: number
   inputColor: string
+  font: string
 }
 
 export function ProfileTextAreaForm(props: Props) {
@@ -29,12 +30,15 @@ export function ProfileTextAreaForm(props: Props) {
         <input
           className={cn("h-12 w-full rounded-md", props.inputColor)}
           value={text}
+          style={{ fontFamily: props.font }}
         />
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent className="flex flex-col space-y-2 bg-white">
           <div>
-            <p className="text-sm">{props.title}</p>
+            <p className="text-sm" style={{ fontFamily: props.font }}>
+              {props.title}
+            </p>
             <div className="flex items-end space-x-1">
               <Textarea
                 placeholder={props.title}
@@ -51,12 +55,17 @@ export function ProfileTextAreaForm(props: Props) {
                     setText(formattedValue)
                   }
                 }}
+                style={{ fontFamily: props.font }}
               />
             </div>
           </div>
           <div className="flex items-end justify-end space-x-1">
             <p className="text-xs">{`${props.maxLength - text.length}`}</p>
-            <Button variant={"outline"} onClick={closeModal}>
+            <Button
+              variant={"outline"}
+              onClick={closeModal}
+              style={{ fontFamily: props.font }}
+            >
               {"保存"}
             </Button>
           </div>

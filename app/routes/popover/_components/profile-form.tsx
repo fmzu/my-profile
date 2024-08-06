@@ -7,6 +7,7 @@ import { cn } from "~/components/ui/lib/utils"
 type Props = {
   className: string
   inputColor: string
+  font: string
 }
 
 export function ProfileForm(props: Props) {
@@ -33,6 +34,7 @@ export function ProfileForm(props: Props) {
         height: `${257 * 2}px`,
         width: `${182 * 2}px`,
         boxSizing: "border-box",
+        fontFamily: props.font,
       }}
     >
       <div className="flex flex-col gap-4">
@@ -47,6 +49,7 @@ export function ProfileForm(props: Props) {
                   className=""
                   maxLength={20}
                   inputColor={props.inputColor}
+                  font={props.font}
                 />
               </div>
               <div className="flex items-center gap-x-2">
@@ -57,6 +60,7 @@ export function ProfileForm(props: Props) {
                   className=""
                   maxLength={19}
                   inputColor={props.inputColor}
+                  font={props.font}
                 />
               </div>
               <div className="flex items-center gap-x-2">
@@ -67,15 +71,16 @@ export function ProfileForm(props: Props) {
                   className=""
                   maxLength={18}
                   inputColor={props.inputColor}
+                  font={props.font}
                 />
               </div>
             </div>
             <div className="w-1/5">
-              <ImageForm inputColor={props.inputColor} />
+              <ImageForm inputColor={props.inputColor} font={props.font} />
             </div>
           </div>
         </div>
-        <ProfileIntroduction inputColor={props.inputColor} />
+        <ProfileIntroduction inputColor={props.inputColor} font={props.font} />
         <div className="grid grid-cols-3 gap-x-1">
           {profileItems.map((item) => (
             <div className="grid gap-y-1" key={item.label}>
@@ -86,6 +91,7 @@ export function ProfileForm(props: Props) {
                 className=""
                 maxLength={6}
                 inputColor={props.inputColor}
+                font={props.font}
               />
             </div>
           ))}
@@ -96,6 +102,7 @@ export function ProfileForm(props: Props) {
             title={"自由記載"}
             maxLength={50}
             inputColor={props.inputColor}
+            font={props.font}
           />
         </div>
       </div>

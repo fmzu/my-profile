@@ -5,14 +5,22 @@ import { ProfileFormItemText } from "./profile-form-item-text"
 
 type Props = {
   inputColor: string
+  font: string
 }
 
 export function ProfileIntroduction(props: Props) {
   return (
-    <div className="flex flex-col gap-y-1">
-      <div className="flex items-center gap-x-1">
+    <div className="flex flex-col gap-y-1" style={{ fontFamily: props.font }}>
+      <div
+        className="flex items-center gap-x-1"
+        style={{ fontFamily: props.font }}
+      >
         <p className="text-xs">{"わたしは"}</p>
-        <BirthDaySelect className=" text-xs" inputColor={props.inputColor} />
+        <BirthDaySelect
+          className=" text-xs"
+          inputColor={props.inputColor}
+          font={props.font}
+        />
         <p className="text-xs">{"生まれで、今は"}</p>
         <ProfileFormItemText
           id={""}
@@ -20,6 +28,7 @@ export function ProfileIntroduction(props: Props) {
           className=""
           maxLength={6}
           inputColor={props.inputColor}
+          font={props.font}
         />
       </div>
       <div className="flex items-center gap-x-1">
@@ -30,6 +39,7 @@ export function ProfileIntroduction(props: Props) {
           className=""
           maxLength={6}
           inputColor={props.inputColor}
+          font={props.font}
         />
         <p className="text-xs">{"って呼んでください！"}</p>
         <p className="text-xs">{"血液型は"}</p>
@@ -38,9 +48,14 @@ export function ProfileIntroduction(props: Props) {
         <BloodTypeSelect
           className="w-10 flex-none"
           inputColor={props.inputColor}
+          font={props.font}
         />
         <p className="text-xs">{"型で、MBTIは"}</p>
-        <MbtiSelect className="w-14 flex-none" inputColor={props.inputColor} />
+        <MbtiSelect
+          className="w-14 flex-none"
+          inputColor={props.inputColor}
+          font={props.font}
+        />
         <p className="text-xs">{"の、"}</p>
         <ProfileFormItemText
           id={""}
@@ -48,6 +63,7 @@ export function ProfileIntroduction(props: Props) {
           className=""
           maxLength={8}
           inputColor={props.inputColor}
+          font={props.font}
         />
       </div>
       <div className="flex items-center gap-x-1">
@@ -58,6 +74,7 @@ export function ProfileIntroduction(props: Props) {
           className=""
           maxLength={12}
           inputColor={props.inputColor}
+          font={props.font}
         />
         <p className="text-xs">{"が好きです！"}</p>
       </div>
@@ -69,6 +86,7 @@ export function ProfileIntroduction(props: Props) {
           className=""
           maxLength={8}
           inputColor={props.inputColor}
+          font={props.font}
         />
         <p className="text-xs">{"に浮上してます！"}</p>
         <p className="text-xs">{"よろしくお願いします！"}</p>

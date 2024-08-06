@@ -11,6 +11,7 @@ import {
 type Props = {
   day: string
   setDay: (value: string) => void
+  font: string
 }
 
 export function DaySelect(props: Props) {
@@ -24,7 +25,7 @@ export function DaySelect(props: Props) {
         <SelectValue placeholder="誕生日" />
       </SelectTrigger>
       <SelectContent className="h-64 bg-white">
-        <SelectGroup>
+        <SelectGroup style={{ fontFamily: props.font }}>
           <SelectLabel>{"誕生日"}</SelectLabel>
           {Array.from({ length: 31 }, (_, i) => (
             <SelectItem

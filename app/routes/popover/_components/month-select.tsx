@@ -12,6 +12,7 @@ import {
 type Props = {
   month: string
   setMonth: (value: string) => void
+  font: string
 }
 export function MonthSelect(props: Props) {
   return (
@@ -24,7 +25,7 @@ export function MonthSelect(props: Props) {
         <SelectValue placeholder="誕生月" />
       </SelectTrigger>
       <SelectContent className="h-64 bg-white">
-        <SelectGroup>
+        <SelectGroup style={{ fontFamily: props.font }}>
           <SelectLabel>{"誕生月"}</SelectLabel>
           {Array.from({ length: 12 }, (_, i) => (
             <SelectItem

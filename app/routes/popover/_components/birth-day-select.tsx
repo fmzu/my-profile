@@ -12,6 +12,7 @@ import { DaySelect } from "./day-select"
 type Props = {
   className: string
   inputColor: string
+  font: string
 }
 
 export function BirthDaySelect(props: Props) {
@@ -35,19 +36,28 @@ export function BirthDaySelect(props: Props) {
             props.inputColor,
           )}
           value={`${month ? `${month}月` : ""}${day ? `${day}日` : ""}`}
+          style={{ fontFamily: props.font }}
         />
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent className="flex flex-col space-y-2 bg-white">
-          <div>
+          <div style={{ fontFamily: props.font }}>
             <p className="text-sm">{"生年月日"}</p>
             <div className="flex items-center space-x-2">
-              <MonthSelect month={month} setMonth={setMonth} />
-              <DaySelect day={day} setDay={setDay} />
+              <MonthSelect
+                month={month}
+                setMonth={setMonth}
+                font={props.font}
+              />
+              <DaySelect day={day} setDay={setDay} font={props.font} />
             </div>
           </div>
           <div className="flex justify-end">
-            <Button variant={"outline"} onClick={closeModal}>
+            <Button
+              variant={"outline"}
+              onClick={closeModal}
+              style={{ fontFamily: props.font }}
+            >
               {"保存"}
             </Button>
           </div>

@@ -19,6 +19,7 @@ import {
 type Props = {
   className: string
   inputColor: string
+  font: string
 }
 
 export function BloodTypeSelect(props: Props) {
@@ -44,18 +45,19 @@ export function BloodTypeSelect(props: Props) {
             props.inputColor,
           )}
           value={selected}
+          style={{ fontFamily: props.font }}
         />
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent className="flex flex-col space-y-2 bg-white">
-          <div>
+          <div style={{ fontFamily: props.font }}>
             <p className="text-sm">{"血液型"}</p>
             <Select onValueChange={handleStringToInt}>
               <SelectTrigger>
                 <SelectValue placeholder="血液型" />
               </SelectTrigger>
               <SelectContent className="bg-white">
-                <SelectGroup>
+                <SelectGroup style={{ fontFamily: props.font }}>
                   <SelectLabel>{"血液型"}</SelectLabel>
                   <SelectItem value="A">{"A"}</SelectItem>
                   <SelectItem value="B">{"B"}</SelectItem>
@@ -66,7 +68,11 @@ export function BloodTypeSelect(props: Props) {
             </Select>
           </div>
           <div className="flex justify-end">
-            <Button variant={"outline"} onClick={closeModal}>
+            <Button
+              variant={"outline"}
+              onClick={closeModal}
+              style={{ fontFamily: props.font }}
+            >
               {"保存"}
             </Button>
           </div>

@@ -14,6 +14,7 @@ type Props = {
   title: string
   maxLength: number
   inputColor: string
+  font: string
 }
 
 export function ProfileFormItemText(props: Props) {
@@ -35,12 +36,15 @@ export function ProfileFormItemText(props: Props) {
             props.inputColor,
           )}
           value={`${props.id}${text}`}
+          style={{ fontFamily: props.font }}
         />
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent className="flex flex-col space-y-2 bg-white">
           <div>
-            <p className="text-sm">{props.title}</p>
+            <p className="text-sm" style={{ fontFamily: props.font }}>
+              {props.title}
+            </p>
             <div className="flex items-end space-x-1">
               <Input
                 placeholder={props.title}
@@ -49,12 +53,17 @@ export function ProfileFormItemText(props: Props) {
                     setText(event.target.value)
                   }
                 }}
+                style={{ fontFamily: props.font }}
               />
             </div>
           </div>
           <div className="flex items-end justify-end space-x-1">
             <p className="text-xs">{`${props.maxLength - text.length}`}</p>
-            <Button variant={"outline"} onClick={closeModal}>
+            <Button
+              variant={"outline"}
+              onClick={closeModal}
+              style={{ fontFamily: props.font }}
+            >
               {"保存"}
             </Button>
           </div>

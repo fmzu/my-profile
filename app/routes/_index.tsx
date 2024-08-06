@@ -18,7 +18,7 @@ export default function Index() {
 
   const [inputColor, setInputColor] = useState("bg-sky-200")
 
-  const [font, setFont] = useState("")
+  const [font, setFont] = useState("Yomogi")
 
   return (
     <div className="flex flex-col items-center space-y-2 pt-8">
@@ -29,7 +29,7 @@ export default function Index() {
         setInputColor={setInputColor}
       />
       <FontSelects font={font} setFont={setFont} />
-      <ProfileForm className={bgColor} inputColor={inputColor} />
+      <ProfileForm className={bgColor} inputColor={inputColor} font={font} />
       <ProfileImage />
     </div>
   )
