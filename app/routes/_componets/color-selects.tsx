@@ -19,16 +19,19 @@ export function ColorSelects(props: Props) {
   ]
 
   return (
-    <div className="grid grid-cols-7 gap-2">
-      {colors.map((color) => (
-        <ColorSelectButton
-          key={color.bgColor}
-          bgColor={color.bgColor}
-          inputColor={color.inputColor}
-          setBgColor={props.setBgColor}
-          setInputColor={props.setInputColor}
-        />
-      ))}
+    <div>
+      <p className="text-xs"> {"背景色の選択"}</p>
+      <div className="grid grid-cols-7 gap-2">
+        {colors.map((color) => (
+          <ColorSelectButton
+            key={color.bgColor}
+            bgColor={color.bgColor}
+            inputColor={color.inputColor}
+            setBgColor={props.setBgColor}
+            setInputColor={props.setInputColor}
+          />
+        ))}
+      </div>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { ColorSelects } from "./_componets/color-selects"
 import { ProfileForm } from "./_componets/profile-form"
 import { ProfileImage } from "./_componets/profile-image"
 import { FontSelects } from "./_componets/font-selects"
+import { Header } from "./_componets/header"
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,16 +22,19 @@ export default function Index() {
   const [font, setFont] = useState("serif")
 
   return (
-    <div className="flex flex-col items-center space-y-2 pt-8">
-      <ColorSelects
-        bgColor={bgColor}
-        setBgColor={setBgColor}
-        inputColor={inputColor}
-        setInputColor={setInputColor}
-      />
-      <FontSelects font={font} setFont={setFont} />
-      <ProfileForm className={bgColor} inputColor={inputColor} font={font} />
-      <ProfileImage />
+    <div className="flex flex-col space-y-4">
+      <Header />
+      <div className="flex flex-col items-center space-y-2">
+        <ColorSelects
+          bgColor={bgColor}
+          setBgColor={setBgColor}
+          inputColor={inputColor}
+          setInputColor={setInputColor}
+        />
+        <FontSelects font={font} setFont={setFont} />
+        <ProfileForm className={bgColor} inputColor={inputColor} font={font} />
+        <ProfileImage />
+      </div>
     </div>
   )
 }

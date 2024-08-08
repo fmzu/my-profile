@@ -11,7 +11,7 @@ type Props = {
 export function ColorSelectButton(props: Props) {
   return (
     <Button
-      className={cn("w-full", props.bgColor)}
+      className={cn("w-10", props.bgColor)}
       onClick={() => {
         props.setBgColor(props.bgColor)
         props.setInputColor(props.inputColor)

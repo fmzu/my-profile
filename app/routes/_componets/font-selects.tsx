@@ -17,14 +17,17 @@ export function FontSelects(props: Props) {
   ]
 
   return (
-    <div className="grid grid-cols-7 gap-2">
-      {font.map((font) => (
-        <FontSelectButton
-          key={font.font}
-          font={font.font}
-          setFont={props.setFont}
-        />
-      ))}
+    <div>
+      <p className="text-xs"> {"フォントの選択"}</p>
+      <div className="grid grid-cols-7 gap-2">
+        {font.map((font) => (
+          <FontSelectButton
+            key={font.font}
+            font={font.font}
+            setFont={props.setFont}
+          />
+        ))}
+      </div>
     </div>
   )
 }
