@@ -51,6 +51,7 @@ export function ImageForm(props: Props) {
         />
       )}
       <input
+        title="Image Upload"
         ref={fileInputRef}
         type="file"
         accept=".webp,.png,.jpeg,.jpg,.gif,.svg,.bmp,.ico,.tiff,.tif,.svgz,.apng,.avif,.jfif,.pjpeg,.pjp,.jpgv,.hdp,.jpe,.jpeg2000,.jxr,.wdp,.jng,.jif,.jfi"
