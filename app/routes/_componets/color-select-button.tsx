@@ -3,9 +3,7 @@ import { cn } from "~/components/ui/lib/utils"
 
 type Props = {
   bgColor: string
-  inputColor: string
   setBgColor: (color: string) => void
-  setInputColor: (color: string) => void
 }
 
 export function ColorSelectButton(props: Props) {
@@ -14,7 +12,6 @@ export function ColorSelectButton(props: Props) {
       className={cn("w-10", props.bgColor)}
       onClick={() => {
         props.setBgColor(props.bgColor)
-        props.setInputColor(props.inputColor)
       }}
     >
       {""}
