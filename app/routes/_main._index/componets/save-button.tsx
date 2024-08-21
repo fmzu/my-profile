@@ -32,6 +32,7 @@ export function SaveButton() {
         </Button>
       </DialogTrigger>
       <DialogContent className="w-96 bg-white">
+        <p className="font-bold"> {"設定"}</p>
         {imageDataUrl && <img src={imageDataUrl} alt="Generated Profile" />}
       </DialogContent>
     </Dialog>
