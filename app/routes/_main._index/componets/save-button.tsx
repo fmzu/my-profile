@@ -31,7 +31,7 @@ export function SaveButton() {
           {"保存"}
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-white">
+      <DialogContent className="w-96 bg-white">
         {imageDataUrl && <img src={imageDataUrl} alt="Generated Profile" />}
       </DialogContent>
     </Dialog>

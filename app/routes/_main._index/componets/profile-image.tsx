@@ -30,7 +30,7 @@ export function ProfileImage() {
           {"画像をつくる"}
         </button>
       </DialogTrigger>
-      <DialogContent className="bg-white">
+      <DialogContent className="w-96 bg-white">
         {imageDataUrl && <img src={imageDataUrl} alt="Generated Profile" />}
       </DialogContent>
     </Dialog>

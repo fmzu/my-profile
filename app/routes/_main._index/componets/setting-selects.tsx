@@ -1,4 +1,5 @@
 import { ColorSelectButton } from "./color-select-button"
+import { FontSelectButton } from "./font-select-button"
 import { InputColorSelectButton } from "./input-color-select-button"
 
 type Props = {
@@ -6,9 +7,11 @@ type Props = {
   setBgColor: (color: string) => void
   inputColor: string
   setInputColor: (color: string) => void
+  font: string
+  setFont: (color: string) => void
 }
 
-export function ColorSelects(props: Props) {
+export function SettingSelects(props: Props) {
   const bgColors = [
     "bg-yellow-300",
     "bg-lime-300",
@@ -29,9 +32,20 @@ export function ColorSelects(props: Props) {
     "bg-red-200",
   ]
 
+  const font = [
+    { font: "Tsukimi Rounded" },
+    { font: "Zen Kurenaido" },
+    { font: "serif" },
+    { font: "Yusei Magic" },
+    { font: "DotGothic16" },
+    { font: "Yomogi" },
+    { font: "Hachi Maru Pop" },
+  ]
+
   return (
     <div className="space-y-2">
-      <p className="text-xs"> {"背景色の選択"}</p>
+      <p className="font-bold"> {"設定"}</p>
+      <p className="text-xs"> {"背景色"}</p>
       <div className="grid grid-cols-7 gap-2">
         {bgColors.map((color) => (
           <ColorSelectButton
@@ -41,13 +55,23 @@ export function ColorSelects(props: Props) {
           />
         ))}
       </div>
-      <p className="text-xs"> {"入力部分の色の選択"}</p>
+      <p className="text-xs"> {"入力部分の色"}</p>
       <div className="grid grid-cols-7 gap-2">
         {inputColors.map((color) => (
           <InputColorSelectButton
             key={color}
             inputColor={color}
             setInputColor={props.setInputColor}
+          />
+        ))}
+      </div>
+      <p className="text-xs"> {"フォント"}</p>
+      <div className="grid grid-cols-7 gap-2">
+        {font.map((font) => (
+          <FontSelectButton
+            key={font.font}
+            font={font.font}
+            setFont={props.setFont}
           />
         ))}
       </div>

@@ -4,8 +4,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "~/components/ui/popover"
-import { ColorSelects } from "./color-selects"
-import { FontSelects } from "./font-selects"
+import { SettingSelects } from "./setting-selects"
 
 type Props = {
   bgColor: string
@@ -23,13 +22,14 @@ export function SettingPopover(props: Props) {
         <Button variant="outline">{"設定"}</Button>
       </PopoverTrigger>
       <PopoverContent className="w-80 bg-white">
-        <ColorSelects
+        <SettingSelects
           bgColor={props.bgColor}
           setBgColor={props.setBgColor}
           inputColor={props.inputColor}
           setInputColor={props.setInputColor}
+          font={props.font}
+          setFont={props.setFont}
         />
-        <FontSelects font={props.font} setFont={props.setFont} />
       </PopoverContent>
     </Popover>
   )
