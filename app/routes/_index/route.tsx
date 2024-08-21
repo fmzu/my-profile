@@ -1,11 +1,11 @@
 import type { MetaFunction } from "@remix-run/react"
 import { useState } from "react"
-import { ColorSelects } from "./_componets/color-selects"
-import { ProfileForm } from "./_componets/profile-form"
-import { ProfileImage } from "./_componets/profile-image"
-import { FontSelects } from "./_componets/font-selects"
-import { Header } from "./_componets/header"
-import { ProfilePaper } from "./_componets/profile-paper"
+import { Header } from "./componets/header"
+import { ColorSelects } from "./componets/color-selects"
+import { FontSelects } from "./componets/font-selects"
+import { ProfileForm } from "./componets/profile-form"
+import { ProfileImage } from "./componets/profile-image"
+import { ProfileSheet } from "./componets/profile-sheet"
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,7 +42,7 @@ export default function Index() {
           <ProfileImage />
         </div>
         <div className="flex items-center justify-center md:w-1/2">
-          <ProfilePaper />
+          <ProfileSheet />
         </div>
       </div>
       <Header />
