@@ -1,7 +1,6 @@
 import type { MetaFunction } from "@remix-run/react"
 import { useState } from "react"
 import { ProfileForm } from "./componets/profile-form"
-import { ProfileImage } from "./componets/profile-image"
 import { ProfileSheet } from "./componets/profile-sheet"
 import { SaveButton } from "./componets/save-button"
 import { SettingPopover } from "./componets/setting-popover"
@@ -40,7 +39,6 @@ export default function Index() {
             inputColor={inputColor}
             font={font}
           />
-          <ProfileImage />
         </div>
         <div className="flex items-center justify-center">
           <ProfileSheet />
