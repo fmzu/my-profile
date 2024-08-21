@@ -24,7 +24,7 @@ export function ProfileTextAreaForm(props: Props) {
 
   const closeModal = () => setIsOpen(false)
 
-  const handlevalue = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleValue = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const inputValue: string = event.target.value
     let formattedValue: string = inputValue
 
@@ -51,18 +51,14 @@ export function ProfileTextAreaForm(props: Props) {
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent className="flex flex-col space-y-2 bg-white">
-          <div>
-            <p className="text-sm" style={{ fontFamily: props.font }}>
-              {props.title}
-            </p>
-            <div className="flex items-end space-x-1">
-              <Textarea
-                placeholder={props.title}
-                onChange={handlevalue}
-                style={{ fontFamily: props.font }}
-              />
-            </div>
-          </div>
+          <p className="text-sm" style={{ fontFamily: props.font }}>
+            {props.title}
+          </p>
+          <Textarea
+            placeholder={props.title}
+            onChange={handleValue}
+            style={{ fontFamily: props.font }}
+          />
           <div className="flex items-end justify-end space-x-1">
             <p className="text-xs">{`${props.maxLength - text.length}`}</p>
             <Button

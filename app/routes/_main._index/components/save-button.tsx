@@ -25,14 +25,14 @@ export function SaveButton() {
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          variant={"outline"}
+          variant={"secondary"}
           onClick={() => handleOnClick(document.getElementById("profile"))}
         >
           {"保存"}
         </Button>
       </DialogTrigger>
       <DialogContent className="w-96 bg-white">
-        <p className="font-bold"> {"設定"}</p>
+        <p className="font-bold"> {"保存"}</p>
         {imageDataUrl && <img src={imageDataUrl} alt="Generated Profile" />}
       </DialogContent>
     </Dialog>

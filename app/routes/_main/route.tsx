@@ -1,5 +1,5 @@
 import { Outlet } from "@remix-run/react"
-import { HomeHeader } from "../_main._index/componets/home-header"
+import { HomeHeader } from "../_main._index/components/home-header"
 
 export default function MainLayout() {
   return (

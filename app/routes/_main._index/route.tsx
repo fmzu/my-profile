@@ -1,9 +1,9 @@
 import type { MetaFunction } from "@remix-run/react"
 import { useState } from "react"
-import { ProfileForm } from "./componets/profile-form"
-import { ProfileSheet } from "./componets/profile-sheet"
-import { SaveButton } from "./componets/save-button"
-import { SettingPopover } from "./componets/setting-popover"
+import { ProfileForm } from "./components/profile-form"
+import { ProfileSheet } from "./components/profile-sheet"
+import { SaveButton } from "./components/save-button"
+import { SettingPopover } from "./components/setting-popover"
 
 export const meta: MetaFunction = () => {
   return [

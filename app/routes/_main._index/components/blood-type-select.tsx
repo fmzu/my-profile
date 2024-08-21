@@ -49,24 +49,25 @@ export function BloodTypeSelect(props: Props) {
         />
       </PopoverTrigger>
       {isOpen && (
-        <PopoverContent className="flex flex-col space-y-2 bg-white">
-          <div style={{ fontFamily: props.font }}>
-            <p className="text-sm">{"血液型"}</p>
-            <Select onValueChange={handleStringToInt}>
-              <SelectTrigger>
-                <SelectValue placeholder="血液型" />
-              </SelectTrigger>
-              <SelectContent className="bg-white">
-                <SelectGroup style={{ fontFamily: props.font }}>
-                  <SelectLabel>{"血液型"}</SelectLabel>
-                  <SelectItem value="A型">{"A型"}</SelectItem>
-                  <SelectItem value="B型">{"B型"}</SelectItem>
-                  <SelectItem value="O型">{"O型"}</SelectItem>
-                  <SelectItem value="AB型">{"AB型"}</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
+        <PopoverContent
+          className="flex flex-col space-y-2 bg-white"
+          style={{ fontFamily: props.font }}
+        >
+          <p className="text-sm">{"血液型"}</p>
+          <Select onValueChange={handleStringToInt}>
+            <SelectTrigger>
+              <SelectValue placeholder="血液型" />
+            </SelectTrigger>
+            <SelectContent className="bg-white">
+              <SelectGroup style={{ fontFamily: props.font }}>
+                <SelectLabel>{"血液型"}</SelectLabel>
+                <SelectItem value="A型">{"A型"}</SelectItem>
+                <SelectItem value="B型">{"B型"}</SelectItem>
+                <SelectItem value="O型">{"O型"}</SelectItem>
+                <SelectItem value="AB型">{"AB型"}</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
           <div className="flex justify-end">
             <Button
               variant={"outline"}

@@ -19,7 +19,7 @@ export function SettingPopover(props: Props) {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline">{"設定"}</Button>
+        <Button variant="secondary">{"設定"}</Button>
       </PopoverTrigger>
       <PopoverContent className="w-80 bg-white">
         <SettingSelects

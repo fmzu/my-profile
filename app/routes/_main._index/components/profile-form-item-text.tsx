@@ -41,22 +41,18 @@ export function ProfileFormItemText(props: Props) {
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent className="flex flex-col space-y-2 bg-white">
-          <div>
-            <p className="text-sm" style={{ fontFamily: props.font }}>
-              {props.title}
-            </p>
-            <div className="flex items-end space-x-1">
-              <Input
-                placeholder={props.title}
-                onChange={(event) => {
-                  if (event.target.value.length <= props.maxLength) {
-                    setText(event.target.value)
-                  }
-                }}
-                style={{ fontFamily: props.font }}
-              />
-            </div>
-          </div>
+          <p className="text-sm" style={{ fontFamily: props.font }}>
+            {props.title}
+          </p>
+          <Input
+            placeholder={props.title}
+            onChange={(event) => {
+              if (event.target.value.length <= props.maxLength) {
+                setText(event.target.value)
+              }
+            }}
+            style={{ fontFamily: props.font }}
+          />
           <div className="flex items-end justify-end space-x-1">
             <p className="text-xs">{`${props.maxLength - text.length}`}</p>
             <Button

@@ -40,17 +40,14 @@ export function BirthDaySelect(props: Props) {
         />
       </PopoverTrigger>
       {isOpen && (
-        <PopoverContent className="flex flex-col space-y-2 bg-white">
-          <div style={{ fontFamily: props.font }}>
-            <p className="text-sm">{"生年月日"}</p>
-            <div className="flex items-center space-x-2">
-              <MonthSelect
-                month={month}
-                setMonth={setMonth}
-                font={props.font}
-              />
-              <DaySelect day={day} setDay={setDay} font={props.font} />
-            </div>
+        <PopoverContent
+          className="flex flex-col space-y-2 bg-white"
+          style={{ fontFamily: props.font }}
+        >
+          <p className="text-sm">{"生年月日"}</p>
+          <div className="flex items-center space-x-2">
+            <MonthSelect month={month} setMonth={setMonth} font={props.font} />
+            <DaySelect day={day} setDay={setDay} font={props.font} />
           </div>
           <div className="flex justify-end">
             <Button

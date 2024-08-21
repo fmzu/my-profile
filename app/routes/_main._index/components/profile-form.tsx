@@ -27,7 +27,7 @@ export function ProfileForm(props: Props) {
     <div
       id="profile"
       className={cn(
-        "flex flex-col justify-center gap-y-2 p-2",
+        "flex flex-col justify-center gap-y-2 rounded-md p-2",
         props.className,
       )}
       style={{
@@ -81,7 +81,7 @@ export function ProfileForm(props: Props) {
           </div>
         </div>
         <ProfileIntroduction inputColor={props.inputColor} font={props.font} />
-        <div className="grid grid-cols-3 gap-x-1">
+        <div className="grid grid-cols-3 gap-x-1 gap-y-1">
           {profileItems.map((item) => (
             <div className="grid gap-y-1" key={item.label}>
               <p className="text-xs">{item.label}</p>

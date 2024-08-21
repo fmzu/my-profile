@@ -17,10 +17,10 @@ export function ProfileSheet() {
   ]
 
   return (
-    <div style={{ width: `${182 * 2}px` }}>
+    <div style={{ width: `${182 * 2}px` }} className="space-y-4">
       {profileFields.map((field) => (
         <div key={field.id}>
-          <p>{field.label}</p>
+          <p className="font-bold text-sm">{field.label}</p>
           {field.id === 12 ? (
             <Textarea placeholder={field.placeholder} className="flex-1" />
           ) : (
