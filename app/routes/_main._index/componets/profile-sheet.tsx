@@ -1,4 +1,5 @@
 import { Input } from "~/components/ui/input"
+import { Textarea } from "~/components/ui/textarea"
 
 export function ProfileSheet() {
   const profileFields = [
@@ -12,16 +13,19 @@ export function ProfileSheet() {
     { id: 9, label: "現在地", placeholder: "現在地" },
     { id: 10, label: "出身地", placeholder: "出身地" },
     { id: 11, label: "好きなもの", placeholder: "好きなもの" },
-    { id: 11, label: "苦手なもの", placeholder: "苦手なもの" },
-    { id: 11, label: "自由記載", placeholder: "自由記載" },
+    { id: 12, label: "自由記載", placeholder: "自由記載" },
   ]
 
   return (
-    <div className="flex flex-col space-y-2">
-      {profileFields.map((item) => (
-        <div key={item.id} className="flex flex-col">
-          <p>{item.label}</p>
-          <Input placeholder={item.placeholder} className="flex-1" />
+    <div style={{ width: `${182 * 2}px` }}>
+      {profileFields.map((field) => (
+        <div key={field.id}>
+          <p>{field.label}</p>
+          {field.id === 12 ? (
+            <Textarea placeholder={field.placeholder} className="flex-1" />
+          ) : (
+            <Input placeholder={field.placeholder} className="flex-1" />
+          )}
         </div>
       ))}
     </div>
