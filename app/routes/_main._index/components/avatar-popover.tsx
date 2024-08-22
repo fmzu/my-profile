@@ -15,8 +15,10 @@ export function AvatarPopover() {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </PopoverTrigger>
-      <PopoverContent className="flex w-52 flex-col space-y-2 bg-white">
-        <p>{"アルバム"}</p>
+      <PopoverContent className="flex w-52 flex-col items-center space-y-2 bg-white">
+        <a href="/albums">
+          <p>{"アルバム"}</p>
+        </a>
         <Separator />
         <p>{"ダークモード"}</p>
       </PopoverContent>
