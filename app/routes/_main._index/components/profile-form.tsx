@@ -8,6 +8,7 @@ type Props = {
   className: string
   inputColor: string
   font: string
+  id: string
 }
 
 export function ProfileForm(props: Props) {
@@ -25,7 +26,7 @@ export function ProfileForm(props: Props) {
 
   return (
     <div
-      id="profile"
+      id={props.id}
       className={cn(
         "flex flex-col justify-center gap-y-2 rounded-md p-2",
         props.className,

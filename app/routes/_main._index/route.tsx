@@ -19,6 +19,8 @@ export default function Index() {
 
   const [font, setFont] = useState("serif")
 
+  const id = "profile"
+
   return (
     <div className="flex flex-col space-y-4 py-8">
       <div className="flex flex-col space-x-2 space-y-4">
@@ -32,12 +34,13 @@ export default function Index() {
               font={font}
               setFont={setFont}
             />
-            <SaveButton />
+            <SaveButton id={id} />
           </div>
           <ProfileForm
             className={bgColor}
             inputColor={inputColor}
             font={font}
+            id={id}
           />
         </div>
         <div className="flex items-center justify-center">

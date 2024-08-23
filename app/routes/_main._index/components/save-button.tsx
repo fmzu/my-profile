@@ -3,7 +3,11 @@ import { useState } from "react"
 import { Button } from "~/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "~/components/ui/dialog"
 
-export function SaveButton() {
+type Props = {
+  id: string
+}
+
+export function SaveButton(props: Props) {
   const [imageDataUrl, setImageDataUrl] = useState<string | null>(null)
 
   const handleOnClick = async (node: HTMLElement | null) => {
@@ -24,7 +28,7 @@ export function SaveButton() {
       <DialogTrigger asChild>
         <Button
           variant={"secondary"}
-          onClick={() => handleOnClick(document.getElementById("profile"))}
+          onClick={() => handleOnClick(document.getElementById(props.id))}
         >
           {"保存"}
         </Button>
