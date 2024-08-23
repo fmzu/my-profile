@@ -13,7 +13,11 @@ export function SaveButton(props: Props) {
   const handleOnClick = async (node: HTMLElement | null) => {
     if (node) {
       try {
-        const dataUrl = await htmlToImage.toPng(node)
+        const dataUrl = await htmlToImage.toPng(node, {
+          pixelRatio: 2,
+          height: 257 * 2,
+          width: 182 * 2,
+        })
         setImageDataUrl(dataUrl)
       } catch (error) {
         console.error("oops, something went wrong!", error)
