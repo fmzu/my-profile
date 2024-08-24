@@ -7,7 +7,7 @@ type Props = {
   id: string
 }
 
-export function SaveButton(props: Props) {
+export function SavePopover(props: Props) {
   const [imageDataUrl, setImageDataUrl] = useState<string | null>(null)
 
   const handleOnClick = async (node: HTMLElement | null) => {
