@@ -38,7 +38,7 @@ export function SaveButton(props: Props) {
         </Button>
       </DialogTrigger>
       <DialogContent className="w-96 bg-white">
-        <p className="font-bold"> {"設定"}</p>
+        <p className="font-bold"> {"保存"}</p>
         {imageDataUrl && <img src={imageDataUrl} alt="Generated Profile" />}
       </DialogContent>
     </Dialog>
