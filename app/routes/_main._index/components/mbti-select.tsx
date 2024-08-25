@@ -50,7 +50,7 @@ export function MbtiSelect(props: Props) {
       </PopoverTrigger>
       {isOpen && (
         <PopoverContent
-          className="flex flex-col space-y-2 bg-white"
+          className="flex flex-col gap-y-2 bg-white"
           style={{ fontFamily: props.font }}
         >
           <p className="text-sm">{"MBTI"}</p>

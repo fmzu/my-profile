@@ -40,7 +40,7 @@ export function ProfileFormItemText(props: Props) {
         />
       </PopoverTrigger>
       {isOpen && (
-        <PopoverContent className="flex flex-col space-y-2 bg-white">
+        <PopoverContent className="flex flex-col gap-y-2 bg-white">
           <p className="text-sm" style={{ fontFamily: props.font }}>
             {props.title}
           </p>
@@ -53,7 +53,7 @@ export function ProfileFormItemText(props: Props) {
             }}
             style={{ fontFamily: props.font }}
           />
-          <div className="flex items-end justify-end space-x-1">
+          <div className="flex items-end justify-end gap-x-1">
             <p className="text-xs">{`${props.maxLength - text.length}`}</p>
             <Button
               variant={"outline"}
