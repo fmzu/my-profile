@@ -24,7 +24,7 @@ export default function Index() {
   return (
     <div className="flex flex-col space-y-4 py-8">
       <div className="flex flex-col space-x-2 space-y-4">
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center gap-y-2">
           <div className="flex space-x-2">
             <SettingPopover
               bgColor={bgColor}
