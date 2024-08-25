@@ -38,3 +38,30 @@ Make sure to deploy the output of `npm run build`
 ## Styling
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+
+
+##  プロフィール入力フォームの名称
+名前 default.name
+Twitter default.twitter_id
+Instagram default.instagram_id
+画像 default.image
+一人称 default.first_person
+誕生月 default.birth_month
+誕生日 default.birth_day
+血液型 default.nickname
+現在地 default.blood_type
+ニックネーム default.nickname
+性格 default.personality
+MBTI default.mbti
+好きなもの default.like
+活動拠点 default.activity_base
+食べ物 default.food
+飲み物 default.drink
+映画 default.movie
+有名人 default.celebrity
+色 default.color
+ゲーム default.game
+どうぶつ default.animal
+曲 default.song
+場所 default.place
+自由記載 default.free_space
