@@ -1,10 +1,16 @@
-import {} from "~/components/ui/avatar"
-import {} from "~/components/ui/popover"
+import { Button } from "~/components/ui/button"
 import { AvatarPopover } from "./avatar-popover"
+import { House } from "lucide-react"
+import { Link } from "@remix-run/react"
 
 export function HomeHeader() {
   return (
-    <div className="flex h-16 items-center justify-end bg-amber-300 px-4">
+    <div className="flex h-16 items-center justify-between bg-amber-300 px-4">
+      <Link to={"/"}>
+        <Button variant={"ghost"}>
+          <House />
+        </Button>
+      </Link>
       <AvatarPopover />
     </div>
   )

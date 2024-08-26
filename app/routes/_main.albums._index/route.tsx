@@ -1,3 +1,7 @@
 export default function Albums() {
-  return <p>{"albums page"}</p>
+  return (
+    <div className="p-4">
+      <p>{"albums page"}</p>
+    </div>
+  )
 }
