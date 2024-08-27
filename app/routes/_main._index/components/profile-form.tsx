@@ -65,7 +65,6 @@ export function ProfileForm(props: Props) {
             <div className="flex items-center gap-x-2">
               <p className="min-w-fit text-xs">{"名前"}</p>
               <ProfileFormItemText
-                id={""}
                 title="名前"
                 className=""
                 maxLength={20}
@@ -80,7 +79,6 @@ export function ProfileForm(props: Props) {
             <div className="flex items-center gap-x-2">
               <p className="text-xs">{"Twitter"}</p>
               <ProfileFormItemText
-                id={"@"}
                 title="Twitter"
                 className=""
                 maxLength={19}
@@ -95,7 +93,6 @@ export function ProfileForm(props: Props) {
             <div className="flex items-center gap-x-2">
               <p className="text-xs">{"Instagram"}</p>
               <ProfileFormItemText
-                id={"@"}
                 title="Instagram"
                 className=""
                 maxLength={18}
@@ -119,7 +116,6 @@ export function ProfileForm(props: Props) {
           <div className="grid gap-y-1" key={item.label}>
             <p className="text-xs">{item.label}</p>
             <ProfileFormItemText
-              id={""}
               title={item.label}
               className=""
               maxLength={5}

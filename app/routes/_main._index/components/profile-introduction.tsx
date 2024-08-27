@@ -58,7 +58,6 @@ export function ProfileIntroduction(props: Props) {
       </div>
       <div className="flex items-center gap-x-1">
         <ProfileFormItemText
-          id={""}
           title="現在地"
           className=""
           maxLength={6}
@@ -71,7 +70,6 @@ export function ProfileIntroduction(props: Props) {
         />
         <p className="text-xs">{"に住んでます！"}</p>
         <ProfileFormItemText
-          id={""}
           title="ニックネーム"
           className=""
           maxLength={6}
@@ -86,7 +84,6 @@ export function ProfileIntroduction(props: Props) {
       <div className="flex items-center gap-x-1">
         <p className="text-xs">{"って呼んでください！"}</p>
         <ProfileFormItemText
-          id={""}
           title="性格"
           className=""
           maxLength={5}
@@ -107,7 +104,6 @@ export function ProfileIntroduction(props: Props) {
         />
         <p className="text-xs">{"です。"}</p>
         <ProfileFormItemText
-          id={""}
           title="好きなもの"
           className=""
           maxLength={8}
@@ -123,7 +119,6 @@ export function ProfileIntroduction(props: Props) {
       <div className="flex items-center gap-x-1">
         <p className="text-xs">{"よく"}</p>
         <ProfileFormItemText
-          id={""}
           title="活動拠点"
           className=""
           maxLength={8}

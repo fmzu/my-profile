@@ -9,7 +9,6 @@ import {
 } from "~/components/ui/popover"
 
 type Props = {
-  id: string
   className: string
   title: string
   maxLength: number
