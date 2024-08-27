@@ -13,6 +13,8 @@ type Props = {
   maxLength: number
   inputColor: string
   font: string
+  value: string
+  onChange(event: string): void
 }
 
 export function ProfileTextAreaForm(props: Props) {
@@ -34,10 +36,6 @@ export function ProfileTextAreaForm(props: Props) {
       // 改行を追加して結合する
       formattedValue = parts.join("\n")
     }
-
-    if (formattedValue.length <= props.maxLength) {
-      setText(formattedValue)
-    }
   }
 
   return (
@@ -45,7 +43,7 @@ export function ProfileTextAreaForm(props: Props) {
       <PopoverTrigger asChild onClick={openModal}>
         <input
           className={cn("h-20 w-full rounded-md", props.inputColor)}
-          value={text}
+          value={props.value}
           style={{ fontFamily: props.font }}
         />
       </PopoverTrigger>
@@ -56,7 +54,13 @@ export function ProfileTextAreaForm(props: Props) {
           </p>
           <Textarea
             placeholder={props.title}
-            onChange={handleValue}
+            value={props.value}
+            onChange={(event) => {
+              if (event.target.value.length > props.maxLength) {
+                return
+              }
+              props.onChange(event.target.value)
+            }}
             style={{ fontFamily: props.font }}
           />
           <div className="flex items-end justify-end space-x-1">

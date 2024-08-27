@@ -48,8 +48,8 @@ Instagram default.instagram_id
 一人称 default.first_person
 誕生月 default.birth_month
 誕生日 default.birth_day
-血液型 default.nickname
-現在地 default.blood_type
+血液型 default.blood_type
+現在地 default.live
 ニックネーム default.nickname
 性格 default.personality
 MBTI default.mbti

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { ImageForm } from "./image-form"
 import { ProfileFormItemText } from "./profile-form-item-text"
 import { ProfileIntroduction } from "./profile-introduction"
@@ -13,16 +14,36 @@ type Props = {
 
 export function ProfileForm(props: Props) {
   const profileItems = [
-    { label: "食べ物" },
-    { label: "飲み物" },
-    { label: "映画" },
-    { label: "有名人" },
-    { label: "色" },
-    { label: "ゲーム" },
-    { label: "どうぶつ" },
-    { label: "曲" },
-    { label: "場所" },
+    { label: "食べ物", slug: "food" },
+    { label: "飲み物", slug: "drink" },
+    { label: "映画", slug: "movie" },
+    { label: "有名人", slug: "celebrity" },
+    { label: "色", slug: "color" },
+    { label: "ゲーム", slug: "game" },
+    { label: "どうぶつ", slug: "animal" },
+    { label: "曲", slug: "song" },
+    { label: "場所", slug: "place" },
   ]
+
+  const [form, setForm] = useState(() => {
+    if (typeof localStorage === "undefined") {
+      return new Map()
+    }
+
+    const object = localStorage.getItem("profile")
+    if (object) {
+      return new Map(Object.entries(JSON.parse(object)))
+    }
+
+    return new Map()
+  })
+
+  const onChange = (key: string, value: string) => {
+    const draft = form.set(key, value)
+    const object = Object.fromEntries(draft.entries())
+    localStorage.setItem("profile", JSON.stringify(object))
+    setForm(new Map(draft))
+  }
 
   return (
     <div
@@ -50,6 +71,10 @@ export function ProfileForm(props: Props) {
                 maxLength={20}
                 inputColor={props.inputColor}
                 font={props.font}
+                value={form.get("name") || ""}
+                onChange={(value) => {
+                  onChange("name", value)
+                }}
               />
             </div>
             <div className="flex items-center gap-x-2">
@@ -61,6 +86,10 @@ export function ProfileForm(props: Props) {
                 maxLength={19}
                 inputColor={props.inputColor}
                 font={props.font}
+                value={form.get("twitter") || ""}
+                onChange={(value) => {
+                  onChange("twitter", value)
+                }}
               />
             </div>
             <div className="flex items-center gap-x-2">
@@ -72,6 +101,10 @@ export function ProfileForm(props: Props) {
                 maxLength={18}
                 inputColor={props.inputColor}
                 font={props.font}
+                value={form.get("instagram") || ""}
+                onChange={(value) => {
+                  onChange("instagram", value)
+                }}
               />
             </div>
           </div>
@@ -92,6 +125,10 @@ export function ProfileForm(props: Props) {
               maxLength={5}
               inputColor={props.inputColor}
               font={props.font}
+              value={form.get(item.slug) || ""}
+              onChange={(value) => {
+                onChange(item.slug, value)
+              }}
             />
           </div>
         ))}
@@ -103,6 +140,10 @@ export function ProfileForm(props: Props) {
           maxLength={40}
           inputColor={props.inputColor}
           font={props.font}
+          value={form.get("free") || ""}
+          onChange={(value) => {
+            onChange("free", value)
+          }}
         />
       </div>
     </div>

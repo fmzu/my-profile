@@ -15,6 +15,8 @@ type Props = {
   maxLength: number
   inputColor: string
   font: string
+  value: string
+  onChange(event: string): void
 }
 
 export function ProfileFormItemText(props: Props) {
@@ -35,7 +37,7 @@ export function ProfileFormItemText(props: Props) {
             props.className,
             props.inputColor,
           )}
-          value={`${props.id}${text}`}
+          value={props.value}
           style={{ fontFamily: props.font }}
         />
       </PopoverTrigger>
@@ -46,10 +48,12 @@ export function ProfileFormItemText(props: Props) {
           </p>
           <Input
             placeholder={props.title}
+            value={props.value}
             onChange={(event) => {
-              if (event.target.value.length <= props.maxLength) {
-                setText(event.target.value)
+              if (event.target.value.length > props.maxLength) {
+                return
               }
+              props.onChange(event.target.value)
             }}
             style={{ fontFamily: props.font }}
           />
