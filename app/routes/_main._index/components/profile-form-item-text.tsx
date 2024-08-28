@@ -19,8 +19,6 @@ type Props = {
 }
 
 export function ProfileFormItemText(props: Props) {
-  const [text, setText] = useState("")
-
   const [isOpen, setIsOpen] = useState(false)
 
   const openModal = () => setIsOpen(true)
@@ -57,7 +55,7 @@ export function ProfileFormItemText(props: Props) {
             style={{ fontFamily: props.font }}
           />
           <div className="flex items-end justify-end gap-x-1">
-            <p className="text-xs">{`${props.maxLength - text.length}`}</p>
+            <p className="text-xs">{`${props.maxLength - props.value.length}`}</p>
             <Button
               variant={"outline"}
               onClick={closeModal}

@@ -7,7 +7,13 @@ type Props = {
   id: string
 }
 
-export function SavePopover(props: Props) {
+export function SaveDialog(props: Props) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = () => setIsOpen(true)
+
+  const closeModal = () => setIsOpen(false)
+
   const [imageDataUrl, setImageDataUrl] = useState<string | null>(null)
 
   const handleOnClick = async (node: HTMLElement | null) => {
@@ -29,7 +35,7 @@ export function SavePopover(props: Props) {
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
+      <DialogTrigger asChild onClick={openModal}>
         <Button
           variant={"secondary"}
           onClick={() => handleOnClick(document.getElementById(props.id))}
@@ -37,10 +43,17 @@ export function SavePopover(props: Props) {
           {"保存"}
         </Button>
       </DialogTrigger>
-      <DialogContent className="w-96 bg-white">
-        <p className="font-bold"> {"保存"}</p>
-        {imageDataUrl && <img src={imageDataUrl} alt="Generated Profile" />}
-      </DialogContent>
+      {isOpen && (
+        <DialogContent className="w-96 space-y-2 bg-white">
+          <p className="font-bold"> {"保存"}</p>
+          {imageDataUrl && <img src={imageDataUrl} alt="Generated Profile" />}
+          <div className="flex items-end justify-end">
+            <Button variant={"outline"} onClick={closeModal}>
+              {"とじる"}
+            </Button>
+          </div>
+        </DialogContent>
+      )}
     </Dialog>
   )
 }

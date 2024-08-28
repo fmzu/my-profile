@@ -2,8 +2,9 @@ import type { MetaFunction } from "@remix-run/react"
 import { useState } from "react"
 import { ProfileForm } from "./components/profile-form"
 import { ProfileSheet } from "./components/profile-sheet"
-import { SavePopover } from "./components/save-popover"
+import { SaveDialog } from "./components/save-dialog"
 import { SettingPopover } from "./components/setting-popover"
+import { ResetDialog } from "./components/reset-dialog"
 
 export const meta: MetaFunction = () => {
   return [
@@ -34,7 +35,8 @@ export default function Index() {
               font={font}
               setFont={setFont}
             />
-            <SavePopover id={id} />
+            <SaveDialog id={id} />
+            <ResetDialog />
           </div>
           <ProfileForm
             className={bgColor}
