@@ -26,6 +26,7 @@ export function ResetDialog() {
   const resetLocalStorage = () => {
     localStorage.removeItem("profile")
     setForm(new Map())
+    window.location.reload()
   }
 
   return (
@@ -37,7 +38,7 @@ export function ResetDialog() {
       </DialogTrigger>
       {isOpen && (
         <DialogContent className="sm:max-w-[425px]">
-          <p>{"入力を全てリセットしますか？"}</p>
+          <p>{"入力をリセットしますか？"}</p>
           <div className="flex justify-end gap-x-1">
             <Button
               variant={"outline"}
@@ -48,7 +49,7 @@ export function ResetDialog() {
             >
               {"リセット"}
             </Button>
-            <Button variant={"secondary"} onClick={closeModal}>
+            <Button variant={"outline"} onClick={closeModal}>
               {"やめる"}
             </Button>
           </div>
