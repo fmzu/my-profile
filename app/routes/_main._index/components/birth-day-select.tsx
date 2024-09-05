@@ -13,6 +13,7 @@ type Props = {
   className: string
   inputColor: string
   font: string
+  filter: string
 }
 
 export function BirthDaySelect(props: Props) {
@@ -36,7 +37,10 @@ export function BirthDaySelect(props: Props) {
             props.inputColor,
           )}
           value={`${month ? `${month}月` : ""}${day ? `${day}日` : ""}`}
-          style={{ fontFamily: props.font }}
+          style={{
+            fontFamily: props.font,
+            backgroundColor: props.filter,
+          }}
         />
       </PopoverTrigger>
       {isOpen && (

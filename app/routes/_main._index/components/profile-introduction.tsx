@@ -8,6 +8,7 @@ import { ProfileFormItemText } from "./profile-form-item-text"
 type Props = {
   inputColor: string
   font: string
+  filter: string
 }
 
 export function ProfileIntroduction(props: Props) {
@@ -41,18 +42,25 @@ export function ProfileIntroduction(props: Props) {
           className="w-14 flex-none"
           inputColor={props.inputColor}
           font={props.font}
+          filter={props.filter}
         />
         <p className="text-xs">{"は"}</p>
         <BirthDaySelect
           className="w-14"
           inputColor={props.inputColor}
           font={props.font}
+          filter={props.filter}
         />
         <p className="text-xs">{"生まれの"}</p>
         <BloodTypeSelect
           className="w-10 flex-none"
           inputColor={props.inputColor}
           font={props.font}
+          value={form.get("blood_type") || ""}
+          onChange={(value) => {
+            onChange("blood_type", value)
+          }}
+          filter={props.filter}
         />
         <p className="text-xs">{"です！"}</p>
       </div>
@@ -67,6 +75,7 @@ export function ProfileIntroduction(props: Props) {
           onChange={(value) => {
             onChange("live", value)
           }}
+          filter={props.filter}
         />
         <p className="text-xs">{"に住んでます！"}</p>
         <ProfileFormItemText
@@ -79,6 +88,7 @@ export function ProfileIntroduction(props: Props) {
           onChange={(value) => {
             onChange("nickname", value)
           }}
+          filter={props.filter}
         />
       </div>
       <div className="flex items-center gap-x-1">
@@ -93,6 +103,7 @@ export function ProfileIntroduction(props: Props) {
           onChange={(value) => {
             onChange("personality", value)
           }}
+          filter={props.filter}
         />
         <p className="text-xs">{"な性格です。MBTIは"}</p>
       </div>
@@ -101,6 +112,7 @@ export function ProfileIntroduction(props: Props) {
           className="w-14 flex-none"
           inputColor={props.inputColor}
           font={props.font}
+          filter={props.filter}
         />
         <p className="text-xs">{"です。"}</p>
         <ProfileFormItemText
@@ -113,6 +125,7 @@ export function ProfileIntroduction(props: Props) {
           onChange={(value) => {
             onChange("like", value)
           }}
+          filter={props.filter}
         />
         <p className="text-xs">{"が好きです！"}</p>
       </div>
@@ -128,6 +141,7 @@ export function ProfileIntroduction(props: Props) {
           onChange={(value) => {
             onChange("activity_base", value)
           }}
+          filter={props.filter}
         />
         <p className="text-xs">{"に浮上してます！"}</p>
         <p className="text-xs">{"よろしくお願いします！"}</p>

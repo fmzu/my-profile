@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "~/components/ui/button"
 import { cn } from "~/components/ui/lib/utils"
 import {
@@ -20,13 +20,28 @@ type Props = {
   className: string
   inputColor: string
   font: string
+  value: string
+  onChange(event: string): void
+  filter: string
 }
 
 export function BloodTypeSelect(props: Props) {
   const [selected, setSelected] = useState("")
 
+  useEffect(() => {
+    const savedValue = localStorage.getItem("profile")
+    if (savedValue) {
+      setSelected(savedValue)
+    }
+  }, ["profile"])
+
   const handleStringToInt = (value: string) => {
-    setSelected(String(value))
+    // const stringValue = String(value)
+    console.log("stringValue", value)
+    setSelected(value)
+    console.log("selected", selected)
+    localStorage.setItem("profile", value)
+    props.onChange(value)
   }
 
   const [isOpen, setIsOpen] = useState(false)
@@ -45,7 +60,10 @@ export function BloodTypeSelect(props: Props) {
             props.inputColor,
           )}
           value={selected}
-          style={{ fontFamily: props.font }}
+          style={{
+            fontFamily: props.font,
+            backgroundColor: props.filter,
+          }}
         />
       </PopoverTrigger>
       {isOpen && (

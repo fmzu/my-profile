@@ -15,6 +15,7 @@ type Props = {
   font: string
   value: string
   onChange(event: string): void
+  filter: string
 }
 
 export function ProfileTextAreaForm(props: Props) {
@@ -44,7 +45,10 @@ export function ProfileTextAreaForm(props: Props) {
         <input
           className={cn("h-20 w-full rounded-md", props.inputColor)}
           value={props.value}
-          style={{ fontFamily: props.font }}
+          style={{
+            fontFamily: props.font,
+            backgroundColor: props.filter,
+          }}
         />
       </PopoverTrigger>
       {isOpen && (

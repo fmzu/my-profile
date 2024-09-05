@@ -5,6 +5,7 @@ import { cn } from "~/components/ui/lib/utils"
 type Props = {
   inputColor: string
   font: string
+  filter: string
 }
 
 /**
@@ -35,7 +36,10 @@ export function ImageForm(props: Props) {
             "flex h-20 w-full flex-col items-center justify-center rounded-lg",
             props.inputColor,
           )}
-          style={{ fontFamily: props.font }}
+          style={{
+            fontFamily: props.font,
+            backgroundColor: props.filter,
+          }}
         >
           <div>
             <ArrowUpFromLineIcon className="m-auto h-4 w-4 opacity-80" />

@@ -1,4 +1,5 @@
 import { ColorSelectButton } from "./color-select-button"
+import { FontFilterButton } from "./font-filter-button"
 import { FontSelectButton } from "./font-select-button"
 import { InputColorSelectButton } from "./input-color-select-button"
 
@@ -9,6 +10,7 @@ type Props = {
   setInputColor: (color: string) => void
   font: string
   setFont: (color: string) => void
+  handleValueChange: (value: string) => void
 }
 
 export function SettingSelects(props: Props) {
@@ -75,6 +77,8 @@ export function SettingSelects(props: Props) {
           />
         ))}
       </div>
+      <p className="text-xs"> {"透過"}</p>
+      <FontFilterButton onValueChange={props.handleValueChange} />
     </div>
   )
 }

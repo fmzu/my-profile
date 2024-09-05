@@ -14,6 +14,7 @@ type Props = {
   setInputColor: (value: string) => void
   font: string
   setFont: (value: string) => void
+  handleValueChange: (value: string) => void
 }
 
 export function SettingPopover(props: Props) {
@@ -37,6 +38,7 @@ export function SettingPopover(props: Props) {
             setInputColor={props.setInputColor}
             font={props.font}
             setFont={props.setFont}
+            handleValueChange={props.handleValueChange}
           />
           <div className="flex items-end justify-end">
             <Button variant={"outline"} onClick={closeModal}>

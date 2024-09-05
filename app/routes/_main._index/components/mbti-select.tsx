@@ -20,6 +20,7 @@ type Props = {
   className: string
   inputColor: string
   font: string
+  filter: string
 }
 
 export function MbtiSelect(props: Props) {
@@ -45,7 +46,10 @@ export function MbtiSelect(props: Props) {
             props.inputColor,
           )}
           value={selected}
-          style={{ fontFamily: props.font }}
+          style={{
+            fontFamily: props.font,
+            backgroundColor: props.filter,
+          }}
         />
       </PopoverTrigger>
       {isOpen && (

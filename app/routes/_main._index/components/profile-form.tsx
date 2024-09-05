@@ -10,6 +10,8 @@ type Props = {
   inputColor: string
   font: string
   id: string
+  backgroundImage: string
+  filter: string
 }
 
 export function ProfileForm(props: Props) {
@@ -57,6 +59,9 @@ export function ProfileForm(props: Props) {
         width: `${182 * 2}px`,
         boxSizing: "border-box",
         fontFamily: props.font,
+        backgroundImage: `url(${props.backgroundImage})`, // 背景画像を設定
+        backgroundSize: "cover", // 画像をコンテナに合わせて拡大・縮小
+        backgroundPosition: "center", // 画像を中央に配置
       }}
     >
       <div className="flex flex-col gap-y-1">
@@ -74,6 +79,7 @@ export function ProfileForm(props: Props) {
                 onChange={(value) => {
                   onChange("name", value)
                 }}
+                filter={props.filter}
               />
             </div>
             <div className="flex items-center gap-x-2">
@@ -88,6 +94,7 @@ export function ProfileForm(props: Props) {
                 onChange={(value) => {
                   onChange("twitter", value)
                 }}
+                filter={props.filter}
               />
             </div>
             <div className="flex items-center gap-x-2">
@@ -102,15 +109,24 @@ export function ProfileForm(props: Props) {
                 onChange={(value) => {
                   onChange("instagram", value)
                 }}
+                filter={props.filter}
               />
             </div>
           </div>
           <div className="w-1/5">
-            <ImageForm inputColor={props.inputColor} font={props.font} />
+            <ImageForm
+              inputColor={props.inputColor}
+              font={props.font}
+              filter={props.filter}
+            />
           </div>
         </div>
       </div>
-      <ProfileIntroduction inputColor={props.inputColor} font={props.font} />
+      <ProfileIntroduction
+        inputColor={props.inputColor}
+        font={props.font}
+        filter={props.filter}
+      />
       <div className="grid grid-cols-3 gap-x-1 gap-y-1">
         {profileItems.map((item) => (
           <div className="grid gap-y-1" key={item.label}>
@@ -125,6 +141,7 @@ export function ProfileForm(props: Props) {
               onChange={(value) => {
                 onChange(item.slug, value)
               }}
+              filter={props.filter}
             />
           </div>
         ))}
@@ -140,6 +157,7 @@ export function ProfileForm(props: Props) {
           onChange={(value) => {
             onChange("free", value)
           }}
+          filter={props.filter}
         />
       </div>
     </div>

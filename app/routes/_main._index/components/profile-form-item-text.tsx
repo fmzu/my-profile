@@ -16,6 +16,7 @@ type Props = {
   font: string
   value: string
   onChange(event: string): void
+  filter: string
 }
 
 export function ProfileFormItemText(props: Props) {
@@ -35,7 +36,10 @@ export function ProfileFormItemText(props: Props) {
             props.inputColor,
           )}
           value={props.value}
-          style={{ fontFamily: props.font }}
+          style={{
+            fontFamily: props.font,
+            backgroundColor: props.filter,
+          }}
         />
       </PopoverTrigger>
       {isOpen && (
