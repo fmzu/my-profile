@@ -5,7 +5,7 @@ import { Link } from "@remix-run/react"
 
 export function HomeHeader() {
   return (
-    <div className="flex h-16 items-center justify-between bg-amber-300 px-4">
+    <div className="sticky top-0 z-50 flex h-16 items-center justify-between bg-amber-300 px-4">
       <Link to={"/"}>
         <Button variant={"ghost"}>
           <House />
