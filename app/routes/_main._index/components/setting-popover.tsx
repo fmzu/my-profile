@@ -15,6 +15,7 @@ type Props = {
   font: string
   setFont: (value: string) => void
   handleValueChange: (value: string) => void
+  setBgImage: (value: string) => void
 }
 
 export function SettingPopover(props: Props) {
@@ -39,6 +40,7 @@ export function SettingPopover(props: Props) {
             font={props.font}
             setFont={props.setFont}
             handleValueChange={props.handleValueChange}
+            setImage={props.setBgImage}
           />
           <div className="flex items-end justify-end">
             <Button variant={"outline"} onClick={closeModal}>

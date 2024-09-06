@@ -8,10 +8,11 @@ type Props = {
   bgColor: string
   setBgColor: (color: string) => void
   inputColor: string
-  setInputColor: (color: string) => void
+  setInputColor: (font: string) => void
   font: string
   setFont: (color: string) => void
   handleValueChange: (value: string) => void
+  setImage: (image: string) => void
 }
 
 export function SettingSelects(props: Props) {
@@ -35,7 +36,7 @@ export function SettingSelects(props: Props) {
     "bg-red-200",
   ]
 
-  const font = [
+  const fonts = [
     "Tsukimi Rounded",
     "Zen Kurenaido",
     "serif",
@@ -43,6 +44,15 @@ export function SettingSelects(props: Props) {
     "DotGothic16",
     "Yomogi",
     "Hachi Maru Pop",
+  ]
+
+  const backgroundImages = [
+    "https://aipict.com/wp-content/uploads/pink_star01.png",
+    "https://aipict.com/wp-content/uploads/2024/06/white_silk02.png",
+    "https://aipict.com/wp-content/uploads/2022/10/flowers21.png",
+    "https://aipict.com/wp-content/uploads/gold_gradation01.png",
+    "https://aipict.com/wp-content/uploads/2024/07/heart_colorful01.png",
+    "https://aipict.com/wp-content/uploads/2024/07/simple_wave04.png",
   ]
 
   return (
@@ -70,17 +80,17 @@ export function SettingSelects(props: Props) {
       </div>
       <p className="text-xs"> {"フォント"}</p>
       <div className="grid grid-cols-7 gap-2">
-        {font.map((font) => (
+        {fonts.map((font) => (
           <FontSelectButton key={font} font={font} setFont={props.setFont} />
         ))}
       </div>
       <p className="text-xs"> {"背景画像"}</p>
       <div className="grid grid-cols-7 gap-2">
-        {font.map((font) => (
+        {backgroundImages.map((image) => (
           <BackgroundImageButton
-            key={font.font}
-            image={font.font}
-            setImage={props.setFont}
+            key={image}
+            image={image}
+            setImage={props.setImage}
           />
         ))}
       </div>

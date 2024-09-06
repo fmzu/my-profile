@@ -22,13 +22,13 @@ export default function Index() {
 
   const id = "profile"
 
-  const [backgroundValue, setBackgroundValue] = useState("")
+  const [filter, setFilter] = useState("")
 
   const handleValueChange = (value: string) => {
-    setBackgroundValue(value)
+    setFilter(value)
   }
-  const backgroundImage =
-    "https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqGy96X-nCezuzYLVZhZQNTKmBBwqwQs11dJphVylPeDNPD_nsWftuFF_fAP17pbTI2H9WqJkp9OCUVAIgpOsZKMUZ4omzAMy1oPE16TUa3kV9_0VPNwHd-8wz4yHuE9ZmBDgBGtIDBDCWchd6-EbMGHRGlcjzNqDDszuzqmqTJRGgBPsbKRnz5gK2-FMtmcq_KxuOoSqJii7tqYJi78p4_xMQiiVXvDtfRLGDrYGK6Wfcj76KL8xfsxwHsfTETr926L6U1d9QtWHmUmWuudRzxzkTOi6FP5eZA4X4MBySzrXtzA1UGVK_2uXH9m2cDcNmDQ==/11_happy-shiba-inu-dog-on-yellow.jpg.webp?errorImage=false"
+
+  const [bgImage, setBgImage] = useState("bg-sky-300")
 
   return (
     <div className="flex flex-col space-y-4 py-8">
@@ -43,6 +43,7 @@ export default function Index() {
               font={font}
               setFont={setFont}
               handleValueChange={handleValueChange}
+              setBgImage={setBgImage}
             />
             <SaveDialog id={id} />
             <ResetDialog />
@@ -52,8 +53,8 @@ export default function Index() {
             inputColor={inputColor}
             font={font}
             id={id}
-            backgroundImage={backgroundImage}
-            filter={backgroundValue}
+            filter={filter}
+            backgroundImage={bgImage}
           />
         </div>
         <div className="flex items-center justify-center">
