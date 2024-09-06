@@ -30,6 +30,8 @@ export default function Index() {
 
   const [bgImage, setBgImage] = useState("bg-sky-300")
 
+  const [selectImage, setSelectImage] = useState("bg-sky-300")
+
   return (
     <div className="flex flex-col space-y-4 py-8">
       <div className="flex flex-col space-x-2 space-y-4">
@@ -44,6 +46,8 @@ export default function Index() {
               setFont={setFont}
               handleValueChange={handleValueChange}
               setBgImage={setBgImage}
+              selectImage={selectImage}
+              setSelectImage={setSelectImage}
             />
             <SaveDialog id={id} />
             <ResetDialog />
