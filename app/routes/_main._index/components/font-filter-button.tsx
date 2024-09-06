@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Button } from "~/components/ui/button"
 
 type Props = {
@@ -5,8 +6,15 @@ type Props = {
 }
 
 export function FontFilterButton(props: Props) {
+  const [selectedValue, setSelectedValue] = useState("")
+
   const handleClick = (value: string) => {
+    setSelectedValue(value)
     props.onValueChange(value) // 親要素に値を渡す
+  }
+
+  const getButtonClass = (value: string) => {
+    return value === selectedValue ? "border-2 border-black" : ""
   }
 
   return (
@@ -15,6 +23,7 @@ export function FontFilterButton(props: Props) {
         variant={"secondary"}
         onClick={() => handleClick("rgba(255, 255, 255, 0.2)")}
         size={"sm"}
+        className={getButtonClass("rgba(255, 255, 255, 0.2)")}
       >
         {"薄い"}
       </Button>
@@ -22,6 +31,7 @@ export function FontFilterButton(props: Props) {
         variant={"secondary"}
         onClick={() => handleClick("rgba(255, 255, 255, 0.5)")}
         size={"sm"}
+        className={getButtonClass("rgba(255, 255, 255, 0.5)")}
       >
         {"普通"}
       </Button>
@@ -29,10 +39,16 @@ export function FontFilterButton(props: Props) {
         variant={"secondary"}
         onClick={() => handleClick("rgba(255, 255, 255, 0.7)")}
         size={"sm"}
+        className={getButtonClass("rgba(255, 255, 255, 0.7)")}
       >
         {"濃い"}
       </Button>
-      <Button variant={"secondary"} onClick={() => handleClick("")} size={"sm"}>
+      <Button
+        variant={"secondary"}
+        onClick={() => handleClick("")}
+        size={"sm"}
+        className={getButtonClass("")}
+      >
         {"なし"}
       </Button>
     </div>
