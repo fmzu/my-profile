@@ -8,7 +8,7 @@ type Props = {
 export function FontSelectButton(props: Props) {
   return (
     <Button
-      className={"w-10 content-center items-center text-xs"}
+      className={"content-center items-center text-xs"}
       onClick={() => {
         props.setFont(props.font)
       }}

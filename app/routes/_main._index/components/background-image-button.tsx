@@ -8,7 +8,6 @@ type Props = {
 export function BackgroundImageButton(props: Props) {
   return (
     <Button
-      className={"w-10"}
       style={{ backgroundImage: `url(${props.image})` }}
       onClick={() => {
         props.setImage(props.image)
