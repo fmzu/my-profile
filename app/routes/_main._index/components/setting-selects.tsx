@@ -1,3 +1,4 @@
+import { BackgroundImageButton } from "./background-image-button"
 import { ColorSelectButton } from "./color-select-button"
 import { FontFilterButton } from "./font-filter-button"
 import { FontSelectButton } from "./font-select-button"
@@ -35,13 +36,13 @@ export function SettingSelects(props: Props) {
   ]
 
   const font = [
-    { font: "Tsukimi Rounded" },
-    { font: "Zen Kurenaido" },
-    { font: "serif" },
-    { font: "Yusei Magic" },
-    { font: "DotGothic16" },
-    { font: "Yomogi" },
-    { font: "Hachi Maru Pop" },
+    "Tsukimi Rounded",
+    "Zen Kurenaido",
+    "serif",
+    "Yusei Magic",
+    "DotGothic16",
+    "Yomogi",
+    "Hachi Maru Pop",
   ]
 
   return (
@@ -70,10 +71,16 @@ export function SettingSelects(props: Props) {
       <p className="text-xs"> {"フォント"}</p>
       <div className="grid grid-cols-7 gap-2">
         {font.map((font) => (
-          <FontSelectButton
+          <FontSelectButton key={font} font={font} setFont={props.setFont} />
+        ))}
+      </div>
+      <p className="text-xs"> {"背景画像"}</p>
+      <div className="grid grid-cols-7 gap-2">
+        {font.map((font) => (
+          <BackgroundImageButton
             key={font.font}
-            font={font.font}
-            setFont={props.setFont}
+            image={font.font}
+            setImage={props.setFont}
           />
         ))}
       </div>
