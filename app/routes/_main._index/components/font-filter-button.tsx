@@ -13,11 +13,23 @@ export function FontFilterButton(props: Props) {
     <div className="flex space-x-2">
       <Button
         variant={"outline"}
+        onClick={() => handleClick("rgba(255, 255, 255, 0.2)")}
+      >
+        {"薄い"}
+      </Button>
+      <Button
+        variant={"outline"}
         onClick={() => handleClick("rgba(255, 255, 255, 0.5)")}
       >
-        {"あり"}
+        {"普通"}
       </Button>
-      <Button variant={"outline"} onClick={() => handleClick("none")}>
+      <Button
+        variant={"outline"}
+        onClick={() => handleClick("rgba(255, 255, 255, 0.7)")}
+      >
+        {"濃い"}
+      </Button>
+      <Button variant={"outline"} onClick={() => handleClick("")}>
         {"なし"}
       </Button>
     </div>
