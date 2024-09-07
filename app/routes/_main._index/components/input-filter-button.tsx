@@ -5,7 +5,7 @@ type Props = {
   onValueChange: (value: string) => void // 親要素に値を渡すための関数
 }
 
-export function FontFilterButton(props: Props) {
+export function InputFilterButton(props: Props) {
   const [selectedValue, setSelectedValue] = useState("")
 
   const handleClick = (value: string) => {

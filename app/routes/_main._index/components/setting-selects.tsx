@@ -1,7 +1,7 @@
 import { AddImageButton } from "./add-image-button"
 import { BackgroundImageButton } from "./background-image-button"
 import { ColorSelectButton } from "./color-select-button"
-import { FontFilterButton } from "./font-filter-button"
+import { InputFilterButton } from "./input-filter-button"
 import { FontSelectButton } from "./font-select-button"
 import { InputColorSelectButton } from "./input-color-select-button"
 
@@ -130,7 +130,7 @@ export function SettingSelects(props: Props) {
       </div>
       <div>
         <p className="text-xs"> {"透過"}</p>
-        <FontFilterButton onValueChange={props.handleValueChange} />
+        <InputFilterButton onValueChange={props.handleValueChange} />
       </div>
     </div>
   )
