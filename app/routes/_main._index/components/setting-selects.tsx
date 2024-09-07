@@ -84,6 +84,7 @@ export function SettingSelects(props: Props) {
               key={color.slug}
               bgColor={color.color}
               setBgColor={props.setBgColor}
+              selectedColor={props.bgColor}
             />
           ))}
         </div>
@@ -96,6 +97,7 @@ export function SettingSelects(props: Props) {
               key={color.slug}
               inputColor={color.color}
               setInputColor={props.setInputColor}
+              selectedColor={props.inputColor}
             />
           ))}
         </div>
@@ -108,6 +110,7 @@ export function SettingSelects(props: Props) {
               key={font.slug}
               font={font.name}
               setFont={props.setFont}
+              selectedFont={props.font}
             />
           ))}
         </div>
