@@ -53,7 +53,7 @@ export default function Index() {
             <ResetDialog />
           </div>
           <ProfileForm
-            className={bgColor}
+            bgColor={bgColor}
             inputColor={inputColor}
             font={font}
             id={id}

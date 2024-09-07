@@ -6,7 +6,7 @@ import { ProfileTextAreaForm } from "./profile-textarea-form"
 import { cn } from "~/components/ui/lib/utils"
 
 type Props = {
-  className: string
+  bgColor: string
   inputColor: string
   font: string
   id: string
@@ -52,7 +52,7 @@ export function ProfileForm(props: Props) {
       id={props.id}
       className={cn(
         "flex flex-col justify-center gap-4 rounded-md p-2",
-        props.className,
+        props.bgColor,
       )}
       style={{
         height: `${257 * 2}px`,
