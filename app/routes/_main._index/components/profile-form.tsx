@@ -68,7 +68,7 @@ export function ProfileForm(props: Props) {
         <div className="flex">
           <div className="flex w-4/5 flex-col gap-y-1 pr-2">
             <div className="flex items-center gap-x-2">
-              <p className="min-w-fit text-xs">{"名前"}</p>
+              <p className="min-w-fit font-bold text-xs">{"名前"}</p>
               <ProfileFormItemText
                 title="名前"
                 className=""
@@ -83,7 +83,7 @@ export function ProfileForm(props: Props) {
               />
             </div>
             <div className="flex items-center gap-x-2">
-              <p className="text-xs">{"Twitter"}</p>
+              <p className="min-w-fit font-bold text-xs">{"Twitter"}</p>
               <ProfileFormItemText
                 title="Twitter"
                 className=""
@@ -98,7 +98,7 @@ export function ProfileForm(props: Props) {
               />
             </div>
             <div className="flex items-center gap-x-2">
-              <p className="text-xs">{"Instagram"}</p>
+              <p className="min-w-fit font-bold text-xs">{"Instagram"}</p>
               <ProfileFormItemText
                 title="Instagram"
                 className=""
@@ -147,7 +147,7 @@ export function ProfileForm(props: Props) {
         ))}
       </div>
       <div>
-        <p className="text-xs">{"自由記載"}</p>
+        <p className="font-bold text-xs">{"自由記載"}</p>
         <ProfileTextAreaForm
           title={"自由記載"}
           maxLength={40}
