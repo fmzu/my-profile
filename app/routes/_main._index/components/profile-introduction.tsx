@@ -44,14 +44,14 @@ export function ProfileIntroduction(props: Props) {
           font={props.font}
           filter={props.filter}
         />
-        <p className="text-xs">{"は"}</p>
+        <p className="font-bold text-xs">{"は"}</p>
         <BirthDaySelect
           className="w-14"
           inputColor={props.inputColor}
           font={props.font}
           filter={props.filter}
         />
-        <p className="text-xs">{"生まれの"}</p>
+        <p className="font-bold text-xs">{"生まれの"}</p>
         <BloodTypeSelect
           className="w-10 flex-none"
           inputColor={props.inputColor}
@@ -62,7 +62,7 @@ export function ProfileIntroduction(props: Props) {
           }}
           filter={props.filter}
         />
-        <p className="text-xs">{"です！"}</p>
+        <p className="font-bold text-xs">{"です！"}</p>
       </div>
       <div className="flex items-center gap-x-1">
         <ProfileFormItemText
@@ -77,7 +77,7 @@ export function ProfileIntroduction(props: Props) {
           }}
           filter={props.filter}
         />
-        <p className="text-xs">{"に住んでます！"}</p>
+        <p className="font-bold text-xs">{"に住んでます！"}</p>
         <ProfileFormItemText
           title="ニックネーム"
           className=""
@@ -92,7 +92,7 @@ export function ProfileIntroduction(props: Props) {
         />
       </div>
       <div className="flex items-center gap-x-1">
-        <p className="text-xs">{"って呼んでください！"}</p>
+        <p className="font-bold text-xs">{"って呼んでください！"}</p>
         <ProfileFormItemText
           title="性格"
           className=""
@@ -105,7 +105,7 @@ export function ProfileIntroduction(props: Props) {
           }}
           filter={props.filter}
         />
-        <p className="text-xs">{"な性格です。MBTIは"}</p>
+        <p className="font-bold text-xs">{"な性格です。MBTIは"}</p>
       </div>
       <div className="flex items-center gap-x-1">
         <MbtiSelect
@@ -114,7 +114,7 @@ export function ProfileIntroduction(props: Props) {
           font={props.font}
           filter={props.filter}
         />
-        <p className="text-xs">{"です。"}</p>
+        <p className="font-bold text-xs">{"です。"}</p>
         <ProfileFormItemText
           title="好きなもの"
           className=""
@@ -127,10 +127,10 @@ export function ProfileIntroduction(props: Props) {
           }}
           filter={props.filter}
         />
-        <p className="text-xs">{"が好きです！"}</p>
+        <p className="font-bold text-xs">{"が好きです！"}</p>
       </div>
       <div className="flex items-center gap-x-1">
-        <p className="text-xs">{"よく"}</p>
+        <p className="font-bold text-xs">{"よく"}</p>
         <ProfileFormItemText
           title="活動拠点"
           className=""
@@ -143,8 +143,8 @@ export function ProfileIntroduction(props: Props) {
           }}
           filter={props.filter}
         />
-        <p className="text-xs">{"に浮上してます！"}</p>
-        <p className="text-xs">{"よろしくお願いします！"}</p>
+        <p className="font-bold text-xs">{"に浮上してます！"}</p>
+        <p className="font-bold text-xs">{"よろしくお願いします！"}</p>
       </div>
     </div>
   )

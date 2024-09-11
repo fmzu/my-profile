@@ -130,7 +130,7 @@ export function ProfileForm(props: Props) {
       <div className="grid grid-cols-3 gap-x-1 gap-y-1">
         {profileItems.map((item) => (
           <div className="grid gap-y-1" key={item.label}>
-            <p className="text-xs">{item.label}</p>
+            <p className="font-bold text-xs">{item.label}</p>
             <ProfileFormItemText
               title={item.label}
               className=""
