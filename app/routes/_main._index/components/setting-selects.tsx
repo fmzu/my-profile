@@ -127,7 +127,7 @@ export function SettingSelects(props: Props) {
           ))}
           <AddImageButton
             selectImage={props.selectImage}
-            setSelectImage={props.setSelectImage}
+            setSelectImage={props.setImage}
           />
         </div>
       </div>
