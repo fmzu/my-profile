@@ -1,0 +1,26 @@
+
+##  プロフィール入力フォームの名称
+名前 default.name
+Twitter default.twitter_id
+Instagram default.instagram_id
+画像 default.image
+一人称 default.first_person
+誕生月 default.birth_month
+誕生日 default.birth_day
+血液型 default.blood_type
+現在地 default.live
+ニックネーム default.nickname
+性格 default.personality
+MBTI default.mbti
+好きなもの default.like
+活動拠点 default.activity_base
+食べ物 default.food
+飲み物 default.drink
+映画 default.movie
+有名人 default.celebrity
+色 default.color
+ゲーム default.game
+どうぶつ default.animal
+曲 default.song
+場所 default.place
+自由記載 default.free_space
