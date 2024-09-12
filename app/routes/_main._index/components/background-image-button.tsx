@@ -8,6 +8,7 @@ type Props = {
 export function BackgroundImageButton(props: Props) {
   return (
     <Button
+      variant={"outline"}
       style={{ backgroundImage: `url(${props.image})` }}
       onClick={() => {
         props.setImage(props.image)

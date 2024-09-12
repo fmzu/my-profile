@@ -51,7 +51,7 @@ export function ImageForm(props: Props) {
         <img
           src={imageSrc}
           alt="Uploaded"
-          className="flex h-20 w-full flex-col items-center justify-center rounded-lg"
+          className="h-20 w-full rounded-lg object-cover"
         />
       )}
       <input
@@ -59,8 +59,11 @@ export function ImageForm(props: Props) {
         ref={fileInputRef}
         type="file"
         accept=".webp,.png,.jpeg,.jpg,.gif,.svg,.bmp,.ico,.tiff,.tif,.svgz,.apng,.avif,.jfif,.pjpeg,.pjp,.jpgv,.hdp,.jpe,.jpeg2000,.jxr,.wdp,.jng,.jif,.jfi"
-        onChange={onFileChange}
+        onChange={(e) => {
+          onFileChange(e)
+        }}
         className="absolute top-0 left-0 h-full w-full cursor-pointer opacity-0"
+        aria-label="画像をアップロード"
       />
     </div>
   )

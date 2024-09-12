@@ -24,20 +24,29 @@ export function AddImageButton(props: Props) {
     <div className="relative">
       {!props.selectImage && (
         <Button
-          variant={"secondary"}
-          className={"items-center justify-center text-xs"}
+          variant={"outline"}
+          className="flex flex-col items-center justify-center"
         >
-          {"＋"}
+          <div className="text-center text-xs">{"+"}</div>
         </Button>
       )}
-      {props.selectImage && <img src={props.selectImage} alt="Uploaded" />}
+      {props.selectImage && (
+        <img
+          src={props.selectImage}
+          alt="Uploaded"
+          className="h-20 w-full rounded-lg object-cover"
+        />
+      )}
       <input
         title="Image Upload"
         ref={fileInputRef}
         type="file"
         accept=".webp,.png,.jpeg,.jpg,.gif,.svg,.bmp,.ico,.tiff,.tif,.svgz,.apng,.avif,.jfif,.pjpeg,.pjp,.jpgv,.hdp,.jpe,.jpeg2000,.jxr,.wdp,.jng,.jif,.jfi"
-        onChange={onFileChange}
-        className="absolute top-0 left-0 cursor-pointer opacity-0"
+        onChange={(e) => {
+          onFileChange(e)
+        }}
+        className="absolute top-0 left-0 h-full w-full cursor-pointer opacity-0"
+        aria-label="画像をアップロード"
       />
     </div>
   )
