@@ -28,7 +28,7 @@ export default function Index() {
     setFilter(value)
   }
 
-  const [bgImage, setBgImage] = useState("bg-sky-300")
+  const [bgImage, setBgImage] = useState("")
 
   const [selectImage, setSelectImage] = useState<string | null>("")
 
@@ -45,6 +45,7 @@ export default function Index() {
               font={font}
               setFont={setFont}
               handleValueChange={handleValueChange}
+              bgImage={bgImage}
               setBgImage={setBgImage}
               selectImage={selectImage ? selectImage : ""}
               setSelectImage={setSelectImage}

@@ -34,7 +34,7 @@ export function AddImageButton(props: Props) {
         <img
           src={props.selectImage}
           alt="Uploaded"
-          className="h-20 w-full rounded-lg object-cover"
+          className="h-20 w-full object-cover"
         />
       )}
       <input

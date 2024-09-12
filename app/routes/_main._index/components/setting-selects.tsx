@@ -13,6 +13,7 @@ type Props = {
   font: string
   setFont: (color: string) => void
   handleValueChange: (value: string) => void
+  bgImage: string
   setImage: (image: string) => void
   selectImage: string
   setSelectImage: (image: string) => void
@@ -123,6 +124,7 @@ export function SettingSelects(props: Props) {
               key={image.slug}
               image={image.url}
               setImage={props.setImage}
+              selectedImage={props.bgImage}
             />
           ))}
           <AddImageButton
@@ -132,7 +134,7 @@ export function SettingSelects(props: Props) {
         </div>
       </div>
       <div>
-        <p className="text-xs"> {"透過"}</p>
+        <p className="text-xs"> {"フィルター"}</p>
         <InputFilterButton onValueChange={props.handleValueChange} />
       </div>
     </div>

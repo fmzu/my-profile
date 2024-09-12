@@ -15,6 +15,7 @@ type Props = {
   font: string
   setFont: (value: string) => void
   handleValueChange: (value: string) => void
+  bgImage: string
   setBgImage: (value: string) => void
   selectImage: string
   setSelectImage: (image: string) => void
@@ -42,6 +43,7 @@ export function SettingPopover(props: Props) {
             font={props.font}
             setFont={props.setFont}
             handleValueChange={props.handleValueChange}
+            bgImage={props.bgImage}
             setImage={props.setBgImage}
             selectImage={props.selectImage}
             setSelectImage={props.setSelectImage}
